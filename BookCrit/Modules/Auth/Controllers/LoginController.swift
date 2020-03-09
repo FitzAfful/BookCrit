@@ -15,12 +15,10 @@ import AuthenticationServices
 
 class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate, LoginView {
 
-
-
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var googleView: UIView!
     @IBOutlet weak var appleImageView: UIImageView!
-    
+
     @IBOutlet weak var emailTF: ACFloatingTextfield!
     @IBOutlet weak var passwordTF: ACFloatingTextfield!
     fileprivate var currentNonce: String?
@@ -29,13 +27,10 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.disableDarkMode()
         setupUI()
     }
 
-
-    func setupUI(){
-        disableDarkMode()
+    func setupUI() {
         bgView.layer.cornerRadius = 15
         bgView.layer.shadowColor = UIColor(hex: "#7E7E7E").cgColor
         bgView.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -64,7 +59,6 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
         self.view.endEditing(true)
     }
 
-
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         startLoader()
         if error != nil {
@@ -75,41 +69,39 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
         self.presenter.didLoginWithGoogle(user)
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
-        if(textField == passwordTF){
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == passwordTF {
             self.view.endEditing(true)
             self.signInEmail(self.passwordTF!)
-        }else{
+        } else {
             _ = passwordTF.becomeFirstResponder()
         }
-        return true;
+        return true
     }
 
-    @objc func signInGoogle(){
+    @objc func signInGoogle() {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
     }
 
-
     @IBAction func signInEmail(_ sender: Any) {
         let email = self.emailTF.text!
         let password = self.passwordTF.text!
 
-        if(email.isEmpty){
+        if email.isEmpty {
             self.emailTF.showErrorWithText(errorText: "Enter a valid email address")
-        }else if(password.isEmpty){
+        } else if password.isEmpty {
             self.passwordTF.showErrorWithText(errorText: "Enter your password")
-        }else if(email.isValidEmail()){
+        } else if email.isValidEmail() {
             startLoader()
-            self.presenter.didLoginWithEmail(email, password: password, phoneNumber: "", name: "")
-        }else{
+            self.presenter.didLoginWithEmail(email, password: password, name: "")
+        } else {
             emailTF.showErrorWithText(errorText: "Enter a valid email address")
         }
     }
 
-    func signInApple(){
+    func signInApple() {
         if #available(iOS 13, *) {
             startSignInWithAppleFlow()
         } else {
@@ -143,22 +135,18 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
         return hashString
     }
 
-
     func cancelLoader() {
         FTIndicator.dismissProgress()
     }
-
 
     func startLoader() {
         FTIndicator.showProgress(withMessage: "Signing In")
     }
 
-
     func showCustomError(_ message: String?) {
         cancelLoader()
         self.showAlert(withTitle: "Error", message: message ?? "Could not sign in. Please try again later.")
     }
-
 
     func showLoginSuccess(_ message: String?) {
 
@@ -172,21 +160,22 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
 
     }
 
-    func initializeFromStoryboard()-> LoginController{
-        let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginController.storyboardID) as! LoginController
-        return controller
+    func initializeFromStoryboard() -> LoginController {
+        let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginController.storyboardID)
+        guard let myController = controller as? LoginController else { fatalError() }
+        return myController
     }
 
     func presentHomeScreen() {
         FTIndicator.dismissProgress()
-        let controller = TabRouter.assembleModule()
+        /*let controller = TabRouter.assembleModule()
         controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: false)
+        self.present(controller, animated: false)*/
     }
 
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
-        let charset: Array<Character> =
+        let charset: [Character] =
             Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
         var result = ""
         var remainingLength = length
