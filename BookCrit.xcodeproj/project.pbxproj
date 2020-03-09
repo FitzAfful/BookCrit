@@ -35,6 +35,12 @@
 		8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440362416EAE600A79018 /* UserDefaultExtensions.swift */; };
 		8454403F2416EAE600A79018 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440372416EAE600A79018 /* UIColorExtensions.swift */; };
 		845440402416EAE600A79018 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440382416EAE600A79018 /* AppStoryboards.swift */; };
+		845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440412416F5E000A79018 /* AuthenticationErrorTests.swift */; };
+		845440442416F70800A79018 /* AuthenticationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440432416F70800A79018 /* AuthenticationModelTests.swift */; };
+		845440462416F84E00A79018 /* RegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440452416F84E00A79018 /* RegistrationTests.swift */; };
+		845440482416F85900A79018 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440472416F85900A79018 /* LoginTests.swift */; };
+		8454404A2416F86B00A79018 /* ForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440492416F86B00A79018 /* ForgotPasswordTests.swift */; };
+		8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404B2416FC0000A79018 /* FirebaseService.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +100,12 @@
 		845440362416EAE600A79018 /* UserDefaultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultExtensions.swift; sourceTree = "<group>"; };
 		845440372416EAE600A79018 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		845440382416EAE600A79018 /* AppStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
+		845440412416F5E000A79018 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
+		845440432416F70800A79018 /* AuthenticationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModelTests.swift; sourceTree = "<group>"; };
+		845440452416F84E00A79018 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
+		845440472416F85900A79018 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		845440492416F86B00A79018 /* ForgotPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTests.swift; sourceTree = "<group>"; };
+		8454404B2416FC0000A79018 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +182,7 @@
 				84543FE424169C6A00A79018 /* Assets.xcassets */,
 				84543FE624169C6A00A79018 /* LaunchScreen.storyboard */,
 				84543FE924169C6A00A79018 /* Info.plist */,
+				8454404B2416FC0000A79018 /* FirebaseService.swift */,
 			);
 			path = BookCrit;
 			sourceTree = "<group>";
@@ -179,6 +192,11 @@
 			children = (
 				84543FF224169C6A00A79018 /* BookCritTests.swift */,
 				84543FF424169C6A00A79018 /* Info.plist */,
+				845440412416F5E000A79018 /* AuthenticationErrorTests.swift */,
+				845440432416F70800A79018 /* AuthenticationModelTests.swift */,
+				845440452416F84E00A79018 /* RegistrationTests.swift */,
+				845440472416F85900A79018 /* LoginTests.swift */,
+				845440492416F86B00A79018 /* ForgotPasswordTests.swift */,
 			);
 			path = BookCritTests;
 			sourceTree = "<group>";
@@ -556,6 +574,7 @@
 				8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */,
 				845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */,
 				845440282416DC6C00A79018 /* AuthRouter.swift in Sources */,
+				8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */,
 				8454402C2416DC6C00A79018 /* ForgotPassController.swift in Sources */,
 				845440132416A5E500A79018 /* Event.swift in Sources */,
 				845440152416A5E500A79018 /* EventBus.swift in Sources */,
@@ -579,7 +598,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845440462416F84E00A79018 /* RegistrationTests.swift in Sources */,
+				845440442416F70800A79018 /* AuthenticationModelTests.swift in Sources */,
+				845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */,
+				845440482416F85900A79018 /* LoginTests.swift in Sources */,
 				84543FF324169C6A00A79018 /* BookCritTests.swift in Sources */,
+				8454404A2416F86B00A79018 /* ForgotPasswordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

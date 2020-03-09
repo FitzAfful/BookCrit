@@ -8,52 +8,43 @@
 
 import Foundation
 import GoogleSignIn
-import FirebaseAuth
+import Firebase
 
 class AuthInteractor: AuthUseCase {
 
     var output: AuthInteractorOutput!
+    var firebaseService = FirebaseService()
+
     func firebaseGoogleLogin(with googleUser: GIDGoogleUser) {
-        let authentication = googleUser.authentication
-        let credential = GoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
-        Auth.auth().signIn(with: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: nil, email: "", password: "")
+        let credential = firebaseService.getCredentialFromGoogle(with: googleUser)
+        firebaseService.loginUser(credential: credential) { (result, error) in
+            self.signedIn(error: error, result: result, name: nil, email: nil, password: nil)
         }
     }
 
     func firebaseAppleLogin(with idToken: String, nonce: String) {
-        print(nonce)
-        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idToken, rawNonce: nonce)
-        Auth.auth().signIn(with: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: nil, email: "", password: "")
+        let credential = firebaseService.getCredentialFromApple(with: idToken, nonce: nonce)
+        firebaseService.loginUser(credential: credential) { (result, error) in
+            self.signedIn(error: error, result: result, name: nil, email: nil, password: nil)
         }
     }
 
     func firebaseEmailLogin(with email: String, password: String, name: String) {
-        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
-        print("Email Login")
-        Auth.auth().signIn(with: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: name, email: email, password: password)
+        let credential = firebaseService.getCredentialFromEmail(with: email, password: password)
+        firebaseService.loginUser(credential: credential) { (result, error) in
+            self.signedIn(error: error, result: result, name: nil, email: nil, password: nil)
         }
     }
 
     func firebaseEmailRegister(with email: String, password: String, name: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        firebaseService.registerUser(with: email, password: password, name: name) { (result, error) in
             self.signedIn(error: error, result: result, name: name, email: email, password: password)
         }
     }
 
-    func firebaseFacebookLogin(with token: String) {
-        let credential = FacebookAuthProvider.credential(withAccessToken: token)
-        Auth.auth().signIn(with: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: nil, email: "", password: "")
-        }
-    }
-
     func forgotPassword(with email: String) {
-        Auth.auth().sendPasswordReset(withEmail: email) { error in
+        firebaseService.forgotPassword(with: email) { (error) in
             if error != nil {
-                print(error!.localizedDescription)
                 self.output.onForgotPasswordFailure(message: error!.localizedDescription)
                 return
             }
@@ -61,20 +52,17 @@ class AuthInteractor: AuthUseCase {
         }
     }
 
-    func signedIn(error: Error?, result: AuthDataResult?, name: String?, email: String?, password: String ) {
+    func signedIn(error: Error?, result: FirebaseAuthResult?, name: String?, email: String?, password: String? ) {
         if error != nil {
             if let errorCode = AuthErrorCode(rawValue: error!._code) {
                 switch errorCode {
                 case.wrongPassword:
                     self.output.onSignInFailure(message: "You entered an invalid password please try again!")
                 case.userNotFound:
-                    print("User not found")
                     if let myEmail = email {
-                        print("Email User \(password)")
-                        self.firebaseEmailRegister(with: myEmail, password: password, name: "-")
+                        self.firebaseEmailRegister(with: myEmail, password: password!, name: "-")
                         return
                     } else {
-                        print("User not found II")
                         self.output.onSignInFailure(message: "User not found. Please create an account")
                     }
                 case .weakPassword:
@@ -83,22 +71,13 @@ class AuthInteractor: AuthUseCase {
                     self.output.onSignInFailure(message: "This account exists with different credential")
                 default:
                     self.output.onSignInFailure(message: "Unexpected error \(errorCode.rawValue) please try again!")
-                    print("Creating user error \(error.debugDescription)!")
                 }
             }
             return
         }
 
         if email != nil {
-            let user = Auth.auth().currentUser
-            if let user = user {
-                let changeRequest = user.createProfileChangeRequest()
-                changeRequest.displayName = name!
-                changeRequest.photoURL =
-                    URL(string: "https://example.com/jane-q-user/profile.jpg")
-                changeRequest.commitChanges { _ in
-                }
-            }
+            firebaseService.updateCurrentUserDetails(email: email!, name: name!, photoURL: "https://example.com/jane-q-user/profile.jpg")
         }
 
         self.output.onSignInSuccess()
