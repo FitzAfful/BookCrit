@@ -24,6 +24,7 @@ target ‘BookCrit’ do
     pod 'IQKeyboardManagerSwift'
     pod 'Crashlytics'
     pod "DTPhotoViewerController"
+    pod 'SwiftLint'
 		
 		target 'BookCritTests' do
         inherit! :search_paths

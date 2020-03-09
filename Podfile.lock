@@ -138,6 +138,7 @@ PODS:
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.3)
   - SkeletonView (1.8.3)
+  - SwiftLint (0.38.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -158,6 +159,7 @@ DEPENDENCIES:
   - "NSDate+TimeAgo"
   - Nuke
   - SkeletonView
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -197,6 +199,7 @@ SPEC REPOS:
     - PromisesObjC
     - Protobuf
     - SkeletonView
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -235,7 +238,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 0e94afe3b47cb11876eb6aee296638711a24bf75
   SkeletonView: ce0c2a2e8154c57b32f5b31b65f4cb92ca119861
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 
-PODFILE CHECKSUM: 9cbd839558bc4548056f571a52dc48c9a2bb239b
+PODFILE CHECKSUM: 3c5a4edaf74bb3daa880047fdea99dc6546e0b1a
 
 COCOAPODS: 1.8.4

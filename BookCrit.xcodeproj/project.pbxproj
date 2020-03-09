@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE624169C6A00A79018 /* LaunchScreen.storyboard */; };
 		84543FF324169C6A00A79018 /* BookCritTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FF224169C6A00A79018 /* BookCritTests.swift */; };
 		84543FFE24169C6A00A79018 /* BookCritUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FFD24169C6A00A79018 /* BookCritUITests.swift */; };
+		8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8454400B2416A35300A79018 /* GoogleService-Info.plist */; };
+		8454400E2416A40D00A79018 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454400D2416A40D00A79018 /* Auth.storyboard */; };
+		845440132416A5E500A79018 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440102416A5E500A79018 /* Event.swift */; };
+		845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440112416A5E500A79018 /* ACFloatingTextField.swift */; };
+		845440152416A5E500A79018 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440122416A5E500A79018 /* EventBus.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,11 @@
 		84543FF924169C6A00A79018 /* BookCritUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookCritUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84543FFD24169C6A00A79018 /* BookCritUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCritUITests.swift; sourceTree = "<group>"; };
 		84543FFF24169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8454400B2416A35300A79018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8454400D2416A40D00A79018 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		845440102416A5E500A79018 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		845440112416A5E500A79018 /* ACFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACFloatingTextField.swift; sourceTree = "<group>"; };
+		845440122416A5E500A79018 /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +104,6 @@
 				282DCAF81E88E355595049BE /* Pods-BookCritTests.debug.xcconfig */,
 				184BDD79D9A1A0BACD135A0B /* Pods-BookCritTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +132,8 @@
 		84543FDA24169C6800A79018 /* BookCrit */ = {
 			isa = PBXGroup;
 			children = (
+				8454400F2416A5E500A79018 /* Utilities */,
+				8454400B2416A35300A79018 /* GoogleService-Info.plist */,
 				84543FDB24169C6800A79018 /* AppDelegate.swift */,
 				84543FDD24169C6800A79018 /* SceneDelegate.swift */,
 				84543FDF24169C6800A79018 /* ViewController.swift */,
@@ -130,6 +141,7 @@
 				84543FE424169C6A00A79018 /* Assets.xcassets */,
 				84543FE624169C6A00A79018 /* LaunchScreen.storyboard */,
 				84543FE924169C6A00A79018 /* Info.plist */,
+				8454400D2416A40D00A79018 /* Auth.storyboard */,
 			);
 			path = BookCrit;
 			sourceTree = "<group>";
@@ -150,6 +162,16 @@
 				84543FFF24169C6A00A79018 /* Info.plist */,
 			);
 			path = BookCritUITests;
+			sourceTree = "<group>";
+		};
+		8454400F2416A5E500A79018 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				845440102416A5E500A79018 /* Event.swift */,
+				845440112416A5E500A79018 /* ACFloatingTextField.swift */,
+				845440122416A5E500A79018 /* EventBus.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A2A23ED112BC937710726FBF /* Frameworks */ = {
@@ -174,6 +196,7 @@
 				84543FD624169C6800A79018 /* Resources */,
 				7797B8E872E70E36AD226C8D /* [CP] Embed Pods Frameworks */,
 				F8984C0E6EDF9AFFDFCA8CB3 /* [CP] Copy Pods Resources */,
+				845440162416A70800A79018 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -271,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */,
+				8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */,
+				8454400E2416A40D00A79018 /* Auth.storyboard in Resources */,
 				84543FE524169C6A00A79018 /* Assets.xcassets in Resources */,
 				84543FE324169C6800A79018 /* Main.storyboard in Resources */,
 			);
@@ -326,6 +351,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookCrit/Pods-BookCrit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		845440162416A70800A79018 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		D4F4C1AF8E9797B18E7BEDF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -395,6 +438,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845440132416A5E500A79018 /* Event.swift in Sources */,
+				845440152416A5E500A79018 /* EventBus.swift in Sources */,
+				845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */,
 				84543FE024169C6800A79018 /* ViewController.swift in Sources */,
 				84543FDC24169C6800A79018 /* AppDelegate.swift in Sources */,
 				84543FDE24169C6800A79018 /* SceneDelegate.swift in Sources */,
