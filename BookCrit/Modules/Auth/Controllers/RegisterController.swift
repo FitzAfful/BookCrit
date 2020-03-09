@@ -11,14 +11,14 @@ import FTIndicator
 import GoogleSignIn
 import FirebaseAuth
 
-class RegisterController: UIViewController, GIDSignInDelegate, UITextFieldDelegate, LoginView {
+class RegisterController: UIViewController, UITextFieldDelegate, LoginView {
 
 	@IBOutlet weak var bgView: UIView!
-	@IBOutlet weak var googleView: UIView!
 	@IBOutlet weak var emailTF: ACFloatingTextfield!
 	@IBOutlet weak var nameTF: ACFloatingTextfield!
 	@IBOutlet weak var passwordTF: ACFloatingTextfield!
 	var presenter: AuthPresenter! = AuthPresenter()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		presenter.interactor = AuthInteractor()
@@ -37,10 +37,6 @@ class RegisterController: UIViewController, GIDSignInDelegate, UITextFieldDelega
 		emailTF.delegate = self
 		passwordTF.delegate = self
 		nameTF.delegate = self
-
-		let googleViewTap = UITapGestureRecognizer(target: self, action: #selector(self.signInGoogle))
-		googleView.addGestureRecognizer(googleViewTap)
-		googleView.isUserInteractionEnabled = true
 
 		let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.handleViewTap))
 		self.view.isUserInteractionEnabled = true
@@ -69,11 +65,6 @@ class RegisterController: UIViewController, GIDSignInDelegate, UITextFieldDelega
 			_ = passwordTF.becomeFirstResponder()
 		}
 		return true
-	}
-
-	@objc func signInGoogle() {
-		GIDSignIn.sharedInstance().delegate = self
-		GIDSignIn.sharedInstance().signIn()
 	}
 
 	@IBAction func registerEmail(_ sender: Any) {

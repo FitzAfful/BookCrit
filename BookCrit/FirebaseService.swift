@@ -12,7 +12,13 @@ import FirebaseAuth
 
 typealias FirebaseAuthResult = AuthDataResult
 
-class FirebaseService {
+protocol FirebaseServiceProtocol: class {
+    func loginUser(credential: AuthCredential, completion: @escaping (AuthDataResult?, Error?) -> Void)
+    func registerUser(with email: String, password: String, name: String, completion: @escaping (AuthDataResult?, Error?) -> Void)
+    func forgotPassword(with email: String, completion: @escaping (Error?) -> Void)
+}
+
+class FirebaseService: FirebaseServiceProtocol {
     func getCredentialFromGoogle(with googleUser: GIDGoogleUser) -> AuthCredential {
         let authentication = googleUser.authentication
         let credential = GoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)

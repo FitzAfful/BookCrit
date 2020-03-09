@@ -36,11 +36,12 @@
 		8454403F2416EAE600A79018 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440372416EAE600A79018 /* UIColorExtensions.swift */; };
 		845440402416EAE600A79018 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440382416EAE600A79018 /* AppStoryboards.swift */; };
 		845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440412416F5E000A79018 /* AuthenticationErrorTests.swift */; };
-		845440442416F70800A79018 /* AuthenticationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440432416F70800A79018 /* AuthenticationModelTests.swift */; };
 		845440462416F84E00A79018 /* RegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440452416F84E00A79018 /* RegistrationTests.swift */; };
 		845440482416F85900A79018 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440472416F85900A79018 /* LoginTests.swift */; };
 		8454404A2416F86B00A79018 /* ForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440492416F86B00A79018 /* ForgotPasswordTests.swift */; };
 		8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404B2416FC0000A79018 /* FirebaseService.swift */; };
+		8454404E241703F700A79018 /* FirebaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404D241703F700A79018 /* FirebaseServiceTests.swift */; };
+		845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440502417049D00A79018 /* FirebaseServiceStub.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,11 +102,12 @@
 		845440372416EAE600A79018 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		845440382416EAE600A79018 /* AppStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
 		845440412416F5E000A79018 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
-		845440432416F70800A79018 /* AuthenticationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModelTests.swift; sourceTree = "<group>"; };
 		845440452416F84E00A79018 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
 		845440472416F85900A79018 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		845440492416F86B00A79018 /* ForgotPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTests.swift; sourceTree = "<group>"; };
 		8454404B2416FC0000A79018 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		8454404D241703F700A79018 /* FirebaseServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTests.swift; sourceTree = "<group>"; };
+		845440502417049D00A79018 /* FirebaseServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceStub.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,10 +192,11 @@
 		84543FF124169C6A00A79018 /* BookCritTests */ = {
 			isa = PBXGroup;
 			children = (
+				8454404F2417048B00A79018 /* Authentication */,
 				84543FF224169C6A00A79018 /* BookCritTests.swift */,
 				84543FF424169C6A00A79018 /* Info.plist */,
 				845440412416F5E000A79018 /* AuthenticationErrorTests.swift */,
-				845440432416F70800A79018 /* AuthenticationModelTests.swift */,
+				8454404D241703F700A79018 /* FirebaseServiceTests.swift */,
 				845440452416F84E00A79018 /* RegistrationTests.swift */,
 				845440472416F85900A79018 /* LoginTests.swift */,
 				845440492416F86B00A79018 /* ForgotPasswordTests.swift */,
@@ -304,6 +307,14 @@
 				845440372416EAE600A79018 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8454404F2417048B00A79018 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				845440502417049D00A79018 /* FirebaseServiceStub.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		A2A23ED112BC937710726FBF /* Frameworks */ = {
@@ -599,11 +610,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				845440462416F84E00A79018 /* RegistrationTests.swift in Sources */,
-				845440442416F70800A79018 /* AuthenticationModelTests.swift in Sources */,
 				845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */,
 				845440482416F85900A79018 /* LoginTests.swift in Sources */,
+				845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */,
 				84543FF324169C6A00A79018 /* BookCritTests.swift in Sources */,
 				8454404A2416F86B00A79018 /* ForgotPasswordTests.swift in Sources */,
+				8454404E241703F700A79018 /* FirebaseServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97XB8J435J;
 				INFOPLIST_FILE = BookCrit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -797,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97XB8J435J;
 				INFOPLIST_FILE = BookCrit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
