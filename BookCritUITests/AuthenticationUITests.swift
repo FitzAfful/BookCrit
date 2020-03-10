@@ -139,6 +139,7 @@ class AuthenticationUITests: XCTestCase {
 
         XCTAssert(alert.labelContains(text: "You entered an invalid password please try again!"))
     }
+
 }
 
 extension XCUIElement {

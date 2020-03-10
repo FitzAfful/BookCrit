@@ -44,5 +44,4 @@ class LoginControllerTests: XCTestCase {
         XCTAssertFalse(emailAddress.isValidEmail())
     }
 
-
 }

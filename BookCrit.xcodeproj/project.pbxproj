@@ -10,7 +10,6 @@
 		418B5414538E593EC3FC6068 /* Pods_BookCritTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3302B979EA33D04A8E8D7013 /* Pods_BookCritTests.framework */; };
 		84543FDC24169C6800A79018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FDB24169C6800A79018 /* AppDelegate.swift */; };
 		84543FDE24169C6800A79018 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FDD24169C6800A79018 /* SceneDelegate.swift */; };
-		84543FE024169C6800A79018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FDF24169C6800A79018 /* ViewController.swift */; };
 		84543FE324169C6800A79018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE124169C6800A79018 /* Main.storyboard */; };
 		84543FE524169C6A00A79018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE424169C6A00A79018 /* Assets.xcassets */; };
 		84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE624169C6A00A79018 /* LaunchScreen.storyboard */; };
@@ -37,6 +36,7 @@
 		845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440412416F5E000A79018 /* AuthenticationErrorTests.swift */; };
 		8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404B2416FC0000A79018 /* FirebaseService.swift */; };
 		845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440502417049D00A79018 /* FirebaseServiceStub.swift */; };
+		8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */; };
 		8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */; };
 		8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
@@ -68,7 +68,6 @@
 		84543FD824169C6800A79018 /* BookCrit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookCrit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84543FDB24169C6800A79018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84543FDD24169C6800A79018 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84543FDF24169C6800A79018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84543FE224169C6800A79018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84543FE424169C6A00A79018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84543FE724169C6A00A79018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		8454404B2416FC0000A79018 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		845440502417049D00A79018 /* FirebaseServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceStub.swift; sourceTree = "<group>"; };
 		8454405224170E2E00A79018 /* BookCrit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookCrit.entitlements; sourceTree = "<group>"; };
+		8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTests.swift; sourceTree = "<group>"; };
 		8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
 		8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterControllerTests.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,7 +175,6 @@
 				8454400B2416A35300A79018 /* GoogleService-Info.plist */,
 				84543FDB24169C6800A79018 /* AppDelegate.swift */,
 				84543FDD24169C6800A79018 /* SceneDelegate.swift */,
-				84543FDF24169C6800A79018 /* ViewController.swift */,
 				84543FE124169C6800A79018 /* Main.storyboard */,
 				84543FE424169C6A00A79018 /* Assets.xcassets */,
 				84543FE624169C6A00A79018 /* LaunchScreen.storyboard */,
@@ -305,6 +304,7 @@
 			children = (
 				845440502417049D00A79018 /* FirebaseServiceStub.swift */,
 				8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */,
+				8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */,
 				8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */,
 			);
 			path = Authentication;
@@ -585,7 +585,6 @@
 				8454402F2416DC6C00A79018 /* AuthInteractor.swift in Sources */,
 				845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */,
 				8454402A2416DC6C00A79018 /* AuthPresenter.swift in Sources */,
-				84543FE024169C6800A79018 /* ViewController.swift in Sources */,
 				8454402E2416DC6C00A79018 /* RegisterController.swift in Sources */,
 				8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */,
 				845440292416DC6C00A79018 /* AuthContract.swift in Sources */,
@@ -603,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */,
+				8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */,
 				845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */,
 				845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */,
 				8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */,
