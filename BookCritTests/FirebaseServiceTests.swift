@@ -27,13 +27,13 @@ class AuthenticationModelTests: XCTestCase {
     }
 
     func testFirebaseEmailLogin(){
-        let user = firAuth.currentUser
+        /*let user = firAuth.currentUser
         service.registerUser(with: <#T##String#>, password: <#T##String#>, name: <#T##String#>, completion: <#T##(AuthDataResult?, Error?) -> Void#>)
         let longRunningExpectation = expectation(description: "LoginWithEmail")
         var authenticationError: AuthenticationError?
         var createdUser: User?
 
-        interactor.firebaseEmailLogin(with: userEmail, password: userPassword, name: userName)
+        interactor.firebaseEmailLogin(with: userEmail, password: userPassword, name: userName)*/
     }
 
     func testFirebaseAppleLogin(){

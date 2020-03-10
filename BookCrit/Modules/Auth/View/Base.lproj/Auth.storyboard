@@ -48,7 +48,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twf-Fi-vVi" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="76.5" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Password" identifier="Password" label="Password"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="AiX-Ho-s8T"/>
                                             <constraint firstAttribute="height" constant="45" id="ifg-Jf-UoG"/>
@@ -79,7 +79,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="774-fx-3hj" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="20" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Email Address" identifier="Email Address" label="Email Address"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5vG-jX-4SH"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="8AY-mL-FDl"/>
@@ -132,7 +132,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKy-1x-NKz">
                                         <rect key="frame" x="170" y="153" width="120" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="sign up" label="sign up"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5k7-EY-TvA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="9IN-h6-qIL"/>
@@ -335,7 +335,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Grx-wV-L2R" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="76.5" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Email Address" identifier="Email Address" label="Email Address"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="3u9-0V-gXu"/>
                                             <constraint firstAttribute="height" constant="45" id="6lZ-5c-jLr"/>
@@ -366,7 +366,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rys-F6-grZ" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="133.5" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Password" identifier="Password" label="Password"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="W1p-Rj-VnH"/>
                                             <constraint firstAttribute="height" constant="45" id="Y5F-qe-trD"/>
@@ -397,7 +397,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLv-Vs-EWP" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="20" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Name" identifier="Name" label="Name"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Un9-9x-mVp"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="VG0-kX-Rco"/>
@@ -555,7 +555,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Back to Sign In">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="p0e-VY-B41" eventType="touchUpInside" id="xEu-8S-tsc"/>
@@ -566,7 +566,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t33-s9-Sj7" customClass="ACFloatingTextfield" customModule="BookCrit" customModuleProvider="target">
                                         <rect key="frame" x="27" y="50" width="263" height="45"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Email Address" identifier="Email Address" label="Email Address"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="g0V-eX-Gi2"/>
                                             <constraint firstAttribute="height" constant="45" id="vLC-Pj-I3P"/>

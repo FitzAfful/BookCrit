@@ -50,7 +50,6 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
 
         appleImageView.tappable = true
         appleImageView.callback = {
-            print("Shit")
             self.signInApple()
         }
     }
@@ -104,8 +103,6 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
     func signInApple() {
         if #available(iOS 13, *) {
             startSignInWithAppleFlow()
-        } else {
-            // Fallback on earlier versions
         }
     }
 
@@ -168,6 +165,7 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
 
     func presentHomeScreen() {
         FTIndicator.dismissProgress()
+        self.showAlert(withTitle: "Success", message: "Successful Login")
         /*let controller = TabRouter.assembleModule()
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: false)*/
@@ -229,14 +227,11 @@ extension LoginController: ASAuthorizationControllerDelegate {
                 print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
                 return
             }
-            print(idTokenString)
-            print(nonce)
             presenter.didRegisterWithApple(with: idTokenString, nonce: nonce)
         }
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        // Handle error.
         print("Sign in with Apple errored: \(error)")
     }
 

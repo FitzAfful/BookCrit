@@ -15,7 +15,7 @@
 		84543FE524169C6A00A79018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE424169C6A00A79018 /* Assets.xcassets */; };
 		84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE624169C6A00A79018 /* LaunchScreen.storyboard */; };
 		84543FF324169C6A00A79018 /* BookCritTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FF224169C6A00A79018 /* BookCritTests.swift */; };
-		84543FFE24169C6A00A79018 /* BookCritUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FFD24169C6A00A79018 /* BookCritUITests.swift */; };
+		84543FFE24169C6A00A79018 /* AuthenticationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */; };
 		8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8454400B2416A35300A79018 /* GoogleService-Info.plist */; };
 		845440132416A5E500A79018 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440102416A5E500A79018 /* Event.swift */; };
 		845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440112416A5E500A79018 /* ACFloatingTextField.swift */; };
@@ -80,7 +80,7 @@
 		84543FF224169C6A00A79018 /* BookCritTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCritTests.swift; sourceTree = "<group>"; };
 		84543FF424169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84543FF924169C6A00A79018 /* BookCritUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookCritUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84543FFD24169C6A00A79018 /* BookCritUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCritUITests.swift; sourceTree = "<group>"; };
+		84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUITests.swift; sourceTree = "<group>"; };
 		84543FFF24169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8454400B2416A35300A79018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		845440102416A5E500A79018 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 		8454404B2416FC0000A79018 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		8454404D241703F700A79018 /* FirebaseServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTests.swift; sourceTree = "<group>"; };
 		845440502417049D00A79018 /* FirebaseServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceStub.swift; sourceTree = "<group>"; };
+		8454405224170E2E00A79018 /* BookCrit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookCrit.entitlements; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +175,7 @@
 		84543FDA24169C6800A79018 /* BookCrit */ = {
 			isa = PBXGroup;
 			children = (
+				8454405224170E2E00A79018 /* BookCrit.entitlements */,
 				845440172416DC6C00A79018 /* Modules */,
 				8454400F2416A5E500A79018 /* Utilities */,
 				8454400B2416A35300A79018 /* GoogleService-Info.plist */,
@@ -207,7 +209,7 @@
 		84543FFC24169C6A00A79018 /* BookCritUITests */ = {
 			isa = PBXGroup;
 			children = (
-				84543FFD24169C6A00A79018 /* BookCritUITests.swift */,
+				84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */,
 				84543FFF24169C6A00A79018 /* Info.plist */,
 			);
 			path = BookCritUITests;
@@ -623,7 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84543FFE24169C6A00A79018 /* BookCritUITests.swift in Sources */,
+				84543FFE24169C6A00A79018 /* AuthenticationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +791,7 @@
 			baseConfigurationReference = F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookCrit/BookCrit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97XB8J435J;
@@ -809,6 +812,7 @@
 			baseConfigurationReference = 1C60ABEF6AFCCB3ABF397286 /* Pods-BookCrit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookCrit/BookCrit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97XB8J435J;

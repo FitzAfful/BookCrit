@@ -116,6 +116,7 @@ class RegisterController: UIViewController, UITextFieldDelegate, LoginView {
 	}
 
     func presentHomeScreen() {
+        self.showAlert(withTitle: "Success", message: "Successful Registration")
            /*let controller = TabRouter.assembleModule()
            controller.modalPresentationStyle = .fullScreen
            self.present(controller, animated: false)*/
