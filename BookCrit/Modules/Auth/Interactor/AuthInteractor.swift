@@ -67,8 +67,10 @@ class AuthInteractor: AuthUseCase {
                     }
                 case .weakPassword:
                     self.output.onSignInFailure(message: "You entered a weak password. Please choose another!")
+                case .emailAlreadyInUse:
+                    self.output.onSignInFailure(message: "An account with this email already exists. Please log in!")
                 case .accountExistsWithDifferentCredential:
-                    self.output.onSignInFailure(message: "This account exists with different credential")
+                    self.output.onSignInFailure(message: "This account exists with different credentials")
                 default:
                     self.output.onSignInFailure(message: "Unexpected error \(errorCode.rawValue) please try again!")
                 }

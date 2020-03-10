@@ -89,10 +89,11 @@ class ForgotPassController: UIViewController, UITextFieldDelegate, LoginView {
 	func showForgotPasswordSuccess(_ message: String?) {
         print("Forgot success")
 		cancelLoader()
-        self.dismiss(animated: true) {
+        self.showAlert(withTitle: "Success", message: "A reset email has been sent to your email address. Please check and follow the instructions shown")
+        /*self.dismiss(animated: true) {
             FTIndicator.setIndicatorStyle(.dark)
-            FTIndicator.showInfo(withMessage: "A reset email has been sent to your email address. Please check and follow the instructions shown")
-        }
+
+        }*/
 	}
 
 	func displayNetworkError() {

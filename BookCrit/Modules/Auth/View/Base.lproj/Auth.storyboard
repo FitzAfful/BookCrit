@@ -249,6 +249,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWF-L0-Ty0">
                                 <rect key="frame" x="103.5" y="512" width="168" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Forgot Password" identifier="Forgot Password" label="Forgot Password"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Nck-Y8-3YX"/>
                                     <constraint firstAttribute="width" constant="168" id="zTU-wL-6B1"/>
@@ -597,7 +598,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-St-m8R">
                                         <rect key="frame" x="27" y="111" width="160" height="50"/>
                                         <color key="backgroundColor" name="dark"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Reset Password" identifier="Reset Password" label="Reset Password"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="0VY-k1-1zp"/>
                                             <constraint firstAttribute="height" constant="50" id="jVo-13-ezz"/>
