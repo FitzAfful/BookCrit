@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-5G-jqb">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-book_shelf-1" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-5G-jqb">
                         <rect key="frame" x="8" y="10" width="60" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="4SI-tv-ESZ"/>
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="121.73913043478262" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icons8-book_shelf-1" width="256" height="256"/>
+    </resources>
 </document>
