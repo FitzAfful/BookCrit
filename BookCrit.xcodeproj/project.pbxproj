@@ -81,6 +81,7 @@
 		84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
 		84AC11D925368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
 		84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
+		84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		84AC11BA253686CC004BCDF2 /* MarkPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkPro.otf; sourceTree = "<group>"; };
 		84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BlackItalic.otf"; sourceTree = "<group>"; };
 		84AC11D725368735004BCDF2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,6 +407,7 @@
 				84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */,
 				84AC10F92535F532004BCDF2 /* GoogleBooksRouter.swift */,
 				84AC10FE2535F54E004BCDF2 /* GoogleBooksAPIManager.swift */,
+				84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				8454402D2416DC6C00A79018 /* LoginController.swift in Sources */,
 				8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */,
 				845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */,
+				84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */,
 				84AC114525367172004BCDF2 /* SearchController.swift in Sources */,
 				845440282416DC6C00A79018 /* AuthRouter.swift in Sources */,
 				84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */,
