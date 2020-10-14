@@ -13,7 +13,7 @@ public struct Book: Codable {
     var title: String
     var authors: [String]
     var details: String
-    var category: String?
+    var categories: [String]
     var publishedDate: String?
     var imageUrl: String?
 }

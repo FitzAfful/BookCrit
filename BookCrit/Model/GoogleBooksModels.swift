@@ -30,19 +30,19 @@ public struct GoogleBookItem: Codable {
     }
 
     func getBook() -> Book {
-        return Book(id: id, title: volumeInfo.title, authors: volumeInfo.authors, details: volumeInfo.description!, category: volumeInfo.mainCategory, publishedDate: volumeInfo.publishedDate)
+        return Book(id: id, title: volumeInfo.title, authors: volumeInfo.authors ?? [], details: (volumeInfo.description ?? volumeInfo.subtitle) ?? "" , categories: volumeInfo.categories ?? [], publishedDate: volumeInfo.publishedDate, imageUrl: volumeInfo.imageLinks?.thumbnail)
     }
 }
 
 public struct GoogleBookItemVolume: Codable {
     var title: String
-    var authors: [String]
+    var authors: [String]?
     var publisher: String?
     var publishedDate: String?
     var description: String?
-    var pageCount: String?
+    var subtitle: String?
+    var pageCount: Int?
     var printType: String?
-    var mainCategory: String?
     var categories: [String]?
     var averageRating: Double?
     var ratingsCount: Int?
@@ -62,9 +62,9 @@ public struct GoogleBookItemVolume: Codable {
         case publisher
         case publishedDate
         case description
+        case subtitle
         case pageCount
         case printType
-        case mainCategory
         case categories
         case averageRating
         case ratingsCount

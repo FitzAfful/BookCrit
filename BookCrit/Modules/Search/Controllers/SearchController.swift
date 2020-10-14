@@ -36,7 +36,7 @@ class SearchController: UIViewController, UISearchResultsUpdating, UISearchBarDe
         self.tableView.tableFooterView = UIView()
         self.tabBarController?.tabBar.isHidden = false
         self.tabBarController?.tabBar.layer.zPosition = 0
-        self.tableView.separatorStyle = .none
+        self.tableView.separatorStyle = .singleLine
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.isHidden = true
 

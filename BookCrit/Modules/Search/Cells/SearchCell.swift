@@ -22,7 +22,14 @@ class SearchCell: UITableViewCell {
     }
 
     func setItem(item: Book) {
+        let regularFont = UIFont.regular(size: 13)
+        let bold = UIFont.bold(size: 16)
+        let title = item.title.formatAsAttributed(font: bold, color: UIColor.black)
+        let reference = " By \(item.authors.joined(separator: ", "))".formatAsAttributed(font: regularFont, color: UIColor.darkGray)
+        let result = NSMutableAttributedString()
+        result.append(title)
+        result.append(reference)
+        self.searchLabel.attributedText = result
         searchImageView.setImage(item.imageUrl!)
-        searchLabel.text = item.title + "\n" + item.authors.joined()
     }
 }
