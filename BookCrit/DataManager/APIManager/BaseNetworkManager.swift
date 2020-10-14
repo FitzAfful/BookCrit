@@ -67,6 +67,9 @@ extension Encodable {
 
 struct NetworkingConstants {
     static let baseUrl = "https://api.masterprophetlibrary.com/v1/"
+    static let googleBooksBaseUrl = "https://www.googleapis.com/books/v1"
+
+    static let googleBooksKey = "AIzaSyCkOPHCiPpM4aLb0-kuOLSMzLWKfrMtgVU"
     static let networkErrorMessage = "Please check your internet connection and try again."
 }
 

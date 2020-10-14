@@ -9,72 +9,38 @@
 import Foundation
 import Alamofire
 
-enum APIRouter: APIConfiguration {
+enum GoogleBooksRouter: APIConfiguration {
 
-    case getEbooks
+    case searchBookOnGoogleBooks(book: String)
+    case getBookDetails(volumeId: String)
 
     internal var method: HTTPMethod {
         switch self {
-        case .getEbooks: return .get
-        case .getMusic: return .get
-        case .getPodcasts: return .get
-        case .getTeachings: return .get
-        case .getSlides: return .get
-        case .getAudioBooks: return .get
-        case .getAudioBookChapter: return .get
-        case .getMusicVolume: return .get
-        case .getPodcastSession: return .get
-        case .register: return .post
-        case .login: return .post
-        case .forgotPassword: return .post
-        case .getUserProfile: return .get
-        case .updateProfile: return .post
-        case .changePassword: return .put
-        case .changeName: return .put
-        case .liveStream: return .get
+        case .searchBookOnGoogleBooks: return .get
+        case .getBookDetails: return .get
         }
     }
 
     internal var path: String {
         switch self {
-        case .getEbooks: return NetworkingConstants.baseUrl + "ebooks"
-        case .getAudioBooks: return NetworkingConstants.baseUrl + "audiobooks"
-        case .getMusic: return NetworkingConstants.baseUrl + "music"
-        case .getPodcasts: return NetworkingConstants.baseUrl + "podcasts"
-        case .getSlides: return NetworkingConstants.baseUrl + "slides"
-        case .getTeachings: return NetworkingConstants.baseUrl + "teachings"
-        case .register: return NetworkingConstants.baseUrl + "request-account"
-        case .getAudioBookChapter(let audioBookId, let audioBookChapterId): return NetworkingConstants.baseUrl + "audiobooks/\(audioBookId)/\(audioBookChapterId)"
-        case .getMusicVolume(let musicId, let musicVolumeId): return NetworkingConstants.baseUrl + "music/\(musicId)/\(musicVolumeId)"
-        case .getPodcastSession(let podcastId, let sessionId): return NetworkingConstants.baseUrl + "podcasts/\(podcastId)/\(sessionId)"
-        case .login: return NetworkingConstants.baseUrl + "login"
-        case .forgotPassword: return NetworkingConstants.baseUrl + "forgot-password"
-        case .getUserProfile: return NetworkingConstants.baseUrl
-        case .updateProfile: return NetworkingConstants.baseUrl
-        case .changePassword(let id, _): return NetworkingConstants.baseUrl + "password-change/\(id)"
-        case .changeName(let id, _): return NetworkingConstants.baseUrl + "profile-update/\(id)"
-        case .liveStream: return "https://myprophecynow.com/api/v1/live-stream"
+        case .searchBookOnGoogleBooks: return NetworkingConstants.googleBooksBaseUrl + "/volumes"
+        case .getBookDetails(let volumeId): return NetworkingConstants.googleBooksBaseUrl + "/volumes/\(volumeId)"
         }
     }
 
     internal var parameters: [String: Any] {
         switch self {
-        default: return [:]
+        case .searchBookOnGoogleBooks(let book):
+            return ["q": book,
+                    "orderBy": "relevance",
+                    "key": NetworkingConstants.googleBooksKey]
+        default:
+            return ["key": NetworkingConstants.googleBooksKey]
         }
     }
 
     internal var body: [String: Any] {
         switch self {
-        case .register(let param):
-            return param.dictionary
-        case .login(let param):
-            return param.dictionary
-        case .forgotPassword(let param):
-            return ["email": param]
-        case .changePassword(_, let param):
-            return param.dictionary
-        case .changeName(_, let param):
-            return param.dictionary
         default: return [:]
         }
     }

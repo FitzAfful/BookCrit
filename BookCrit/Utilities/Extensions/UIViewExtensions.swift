@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Nuke
 
 @IBDesignable extension UIView {
 	
@@ -241,6 +242,12 @@ private var tappableKey : UInt8 = 0
 private var actionKey : UInt8 = 1
 
 extension UIImageView {
+
+    func setImage(_ imageUrl: String) {
+        if let url = URL(string: imageUrl) {
+            Nuke.loadImage(with: url, into: self)
+        }
+    }
 
     @objc var callback: SimpleClosure {
         get {

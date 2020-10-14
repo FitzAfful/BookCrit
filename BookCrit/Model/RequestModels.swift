@@ -8,3 +8,12 @@
 
 import Foundation
 
+public struct Book: Codable {
+    var id: String
+    var title: String
+    var authors: [String]
+    var details: String
+    var category: String?
+    var publishedDate: String?
+    var imageUrl: String?
+}

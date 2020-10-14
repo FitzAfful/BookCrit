@@ -10,8 +10,7 @@ import Foundation
 import Alamofire
 
 protocol GoogleBooksDataFetcher {
-    func getEbooks(completion:@escaping (DataResponse<EbooksResponse, AFError>) -> Void)
-
+    func searchBookOnGoogleBooks(book: String, completion:@escaping (DataResponse<GoogleBooksResponse, AFError>) -> Void)
 }
 
 public class GoogleBooksAPIManager: GoogleBooksDataFetcher {
@@ -22,21 +21,20 @@ public class GoogleBooksAPIManager: GoogleBooksDataFetcher {
         self.manager = manager
     }
 
-    /* func getEbooks(completion:@escaping (DataResponse<EbooksResponse, AFError>) -> Void) {
-        manager.request(APIRouter.getEbooks).responseDecodable { (response: DataResponse<EbooksResponse, AFError>) in
-            print(response)
+    func searchBookOnGoogleBooks(book: String, completion: @escaping (DataResponse<GoogleBooksResponse, AFError>) -> Void) {
+        manager.request(GoogleBooksRouter.searchBookOnGoogleBooks(book: book)).responseDecodable { (response) in
             completion(response)
         }
-    } */
+    }
+
 }
 
 public class MockGoogleBooksDataFetcher: GoogleBooksDataFetcher {
-    /*func getDiscover(completion: @escaping (DataResponse<LibraryResponse, AFError>) -> Void) {
-        let object = LibraryResponseObject(ebooks: ebookData, audioBooks: audiobookData, teachings: teachingsData, music: musicData, podcasts: podcastData)
-        let libraryResponse = LibraryResponse(data: object)
-        let result = Result<LibraryResponse, AFError>.success(libraryResponse)
-        let response = DataResponse<LibraryResponse, AFError>(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 0, result: result)
+    func searchBookOnGoogleBooks(book: String, completion: @escaping (DataResponse<GoogleBooksResponse, AFError>) -> Void) {
+        let books = GoogleBooksResponse(totalItems: 0, kind: "books", items: [])
+        let result = Result<GoogleBooksResponse, AFError>.success(books)
+        let response = DataResponse<GoogleBooksResponse, AFError>(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 0, result: result)
         completion(response)
-    }*/
+    }
 
 }
