@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -107,7 +108,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIn-Ts-HdU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIn-Ts-HdU">
                                         <rect key="frame" x="27" y="153" width="120" height="50"/>
                                         <color key="backgroundColor" name="dark"/>
                                         <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
@@ -130,7 +131,7 @@
                                             <action selector="signInEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFL-bo-Oux"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKy-1x-NKz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKy-1x-NKz">
                                         <rect key="frame" x="170" y="153" width="120" height="50"/>
                                         <accessibility key="accessibilityConfiguration" identifier="sign up" label="sign up"/>
                                         <constraints>
@@ -212,7 +213,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kCV-fa-1Nq" secondAttribute="trailing" constant="27" id="1Fe-69-pcf"/>
                                     <constraint firstItem="8Su-I6-kJr" firstAttribute="leading" secondItem="RIn-Ts-HdU" secondAttribute="trailing" constant="8" id="3LJ-Ja-iz6"/>
@@ -247,7 +248,7 @@
                                     <constraint firstAttribute="height" constant="100" id="S9T-gu-B1J"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWF-L0-Ty0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWF-L0-Ty0">
                                 <rect key="frame" x="103.5" y="512" width="168" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Forgot Password" identifier="Forgot Password" label="Forgot Password"/>
                                 <constraints>
@@ -263,6 +264,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IWF-L0-Ty0" firstAttribute="top" secondItem="Cst-5T-xqQ" secondAttribute="bottom" constant="6.5" id="1dD-Vw-1wA"/>
@@ -281,7 +283,6 @@
                             <constraint firstItem="WHR-ZU-DrO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tlB-rS-mzi"/>
                             <constraint firstItem="IWF-L0-Ty0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wrW-QM-tn4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="gNR-89-CUI"/>
                     <connections>
@@ -426,7 +427,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-Em-LgA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-Em-LgA">
                                         <rect key="frame" x="27" y="208" width="120" height="50"/>
                                         <color key="backgroundColor" name="dark"/>
                                         <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
@@ -449,7 +450,7 @@
                                             <action selector="registerEmail:" destination="oqi-nD-Xd2" eventType="touchUpInside" id="P31-Pk-XiP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eul-Ou-kbP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eul-Ou-kbP">
                                         <rect key="frame" x="170" y="208" width="120" height="50"/>
                                         <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
                                         <constraints>
@@ -472,7 +473,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="317" id="0fW-I1-H7J"/>
                                     <constraint firstAttribute="trailing" secondItem="llw-wQ-R28" secondAttribute="trailing" constant="27" id="25k-6l-T3a"/>
@@ -504,6 +505,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="syF-3U-ZR6"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gSt-FM-ehV" firstAttribute="leading" secondItem="VzD-z5-sJR" secondAttribute="leading" id="CtV-l3-Nxx"/>
@@ -520,7 +522,6 @@
                             <constraint firstItem="VzD-z5-sJR" firstAttribute="bottom" secondItem="syF-3U-ZR6" secondAttribute="bottom" constant="73" id="os0-QB-PLn"/>
                             <constraint firstItem="JPR-Nl-0SF" firstAttribute="leading" secondItem="DhR-K5-3xv" secondAttribute="leading" id="ucb-2V-AMK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="syF-3U-ZR6"/>
                     </view>
                     <connections>
                         <outlet property="bgView" destination="DhR-K5-3xv" id="iUZ-V0-OAI"/>
@@ -548,7 +549,7 @@
                                 <rect key="frame" x="0.0" y="-128" width="375" height="891"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-tG-xah">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-tG-xah">
                                 <rect key="frame" x="103.5" y="391" width="168" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="ebm-cf-Nwh"/>
@@ -595,7 +596,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-St-m8R">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-St-m8R">
                                         <rect key="frame" x="27" y="111" width="160" height="50"/>
                                         <color key="backgroundColor" name="dark"/>
                                         <accessibility key="accessibilityConfiguration" hint="Reset Password" identifier="Reset Password" label="Reset Password"/>
@@ -636,6 +637,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="MMQ-8G-bjN"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gJ7-ZS-2wQ" firstAttribute="leading" secondItem="eXn-0p-87i" secondAttribute="leading" id="3xH-0y-f13"/>
@@ -654,7 +656,6 @@
                             <constraint firstItem="cw3-tG-xah" firstAttribute="centerX" secondItem="gJ7-ZS-2wQ" secondAttribute="centerX" id="v8E-zN-XED"/>
                             <constraint firstItem="eXn-0p-87i" firstAttribute="leading" secondItem="dqE-CQ-p93" secondAttribute="leading" id="vVM-PQ-kJ8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="MMQ-8G-bjN"/>
                     </view>
                     <connections>
                         <outlet property="bgView" destination="s7V-yP-wj1" id="rZX-Po-Gsp"/>
@@ -666,6 +667,26 @@
             <point key="canvasLocation" x="1553" y="134"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="774-fx-3hj">
+            <size key="intrinsicContentSize" width="83.5" height="17"/>
+        </designable>
+        <designable name="Grx-wV-L2R">
+            <size key="intrinsicContentSize" width="83.5" height="17"/>
+        </designable>
+        <designable name="Rys-F6-grZ">
+            <size key="intrinsicContentSize" width="58" height="16"/>
+        </designable>
+        <designable name="mLv-Vs-EWP">
+            <size key="intrinsicContentSize" width="34.5" height="17"/>
+        </designable>
+        <designable name="t33-s9-Sj7">
+            <size key="intrinsicContentSize" width="83.5" height="17"/>
+        </designable>
+        <designable name="twf-Fi-vVi">
+            <size key="intrinsicContentSize" width="58" height="16"/>
+        </designable>
+    </designables>
     <resources>
         <image name="apple" width="414" height="72"/>
         <image name="bg3" width="4000" height="6000"/>
@@ -674,5 +695,11 @@
         <namedColor name="dark">
             <color red="0.0" green="0.10999999940395355" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

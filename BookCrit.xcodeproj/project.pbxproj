@@ -39,6 +39,49 @@
 		8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */; };
 		8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */; };
 		8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */; };
+		84AC109E2535EFFE004BCDF2 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */; };
+		84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC10F92535F532004BCDF2 /* GoogleBooksRouter.swift */; };
+		84AC10FF2535F54E004BCDF2 /* GoogleBooksAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC10FE2535F54E004BCDF2 /* GoogleBooksAPIManager.swift */; };
+		84AC11052535F5EB004BCDF2 /* RequestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11042535F5EB004BCDF2 /* RequestModels.swift */; };
+		84AC110D2535F5F7004BCDF2 /* GoogleBooksModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC110C2535F5F7004BCDF2 /* GoogleBooksModels.swift */; };
+		84AC114525367172004BCDF2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC114425367172004BCDF2 /* SearchController.swift */; };
+		84AC116B253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
+		84AC116C253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
+		84AC116D253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
+		84AC116E253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
+		84AC116F253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
+		84AC1170253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
+		84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
+		84AC117A25367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
+		84AC117B25367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
+		84AC11AE25367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
+		84AC11AF25367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
+		84AC11B025367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
+		84AC11BC253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
+		84AC11BD253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
+		84AC11BE253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
+		84AC11BF253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
+		84AC11C0253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
+		84AC11C1253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
+		84AC11C2253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
+		84AC11C3253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
+		84AC11C4253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
+		84AC11C5253686CC004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
+		84AC11C6253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
+		84AC11C7253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
+		84AC11C8253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
+		84AC11C9253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
+		84AC11CA253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
+		84AC11CB253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
+		84AC11CC253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
+		84AC11CD253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
+		84AC11CE253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
+		84AC11CF253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
+		84AC11D0253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
+		84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
+		84AC11D925368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
+		84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
+		84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +146,25 @@
 		8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTests.swift; sourceTree = "<group>"; };
 		8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
 		8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterControllerTests.swift; sourceTree = "<group>"; };
+		84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
+		84AC10F92535F532004BCDF2 /* GoogleBooksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRouter.swift; sourceTree = "<group>"; };
+		84AC10FE2535F54E004BCDF2 /* GoogleBooksAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIManager.swift; sourceTree = "<group>"; };
+		84AC11042535F5EB004BCDF2 /* RequestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModels.swift; sourceTree = "<group>"; };
+		84AC110C2535F5F7004BCDF2 /* GoogleBooksModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksModels.swift; sourceTree = "<group>"; };
+		84AC114425367172004BCDF2 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		84AC1169253672D3004BCDF2 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		84AC116A253672D3004BCDF2 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		84AC117825367666004BCDF2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavController.swift; sourceTree = "<group>"; };
+		84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Black.otf"; sourceTree = "<group>"; };
+		84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
+		84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Book.otf"; sourceTree = "<group>"; };
+		84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BoldItalic.otf"; sourceTree = "<group>"; };
+		84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-TestFont.otf"; sourceTree = "<group>"; };
+		84AC11BA253686CC004BCDF2 /* MarkPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkPro.otf; sourceTree = "<group>"; };
+		84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BlackItalic.otf"; sourceTree = "<group>"; };
+		84AC11D725368735004BCDF2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,9 +231,11 @@
 		84543FDA24169C6800A79018 /* BookCrit */ = {
 			isa = PBXGroup;
 			children = (
-				8454405224170E2E00A79018 /* BookCrit.entitlements */,
+				84AC11032535F5D0004BCDF2 /* Model */,
+				84AC10982535EE3C004BCDF2 /* DataManager */,
 				845440172416DC6C00A79018 /* Modules */,
 				8454400F2416A5E500A79018 /* Utilities */,
+				84AC11B4253686CC004BCDF2 /* Fonts */,
 				8454400B2416A35300A79018 /* GoogleService-Info.plist */,
 				84543FDB24169C6800A79018 /* AppDelegate.swift */,
 				84543FDD24169C6800A79018 /* SceneDelegate.swift */,
@@ -180,6 +244,7 @@
 				84543FE624169C6A00A79018 /* LaunchScreen.storyboard */,
 				84543FE924169C6A00A79018 /* Info.plist */,
 				8454404B2416FC0000A79018 /* FirebaseService.swift */,
+				8454405224170E2E00A79018 /* BookCrit.entitlements */,
 			);
 			path = BookCrit;
 			sourceTree = "<group>";
@@ -218,6 +283,9 @@
 		845440172416DC6C00A79018 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84AC113C253670C9004BCDF2 /* Search */,
+				84AC10962535EE08004BCDF2 /* Home */,
+				84AC10972535EE18004BCDF2 /* Tabs */,
 				845440182416DC6C00A79018 /* Auth */,
 			);
 			path = Modules;
@@ -295,6 +363,7 @@
 				845440352416EAE600A79018 /* UIViewExtensions.swift */,
 				845440362416EAE600A79018 /* UserDefaultExtensions.swift */,
 				845440372416EAE600A79018 /* UIColorExtensions.swift */,
+				84AC11D725368735004BCDF2 /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +377,98 @@
 				8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		84AC10962535EE08004BCDF2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		84AC10972535EE18004BCDF2 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		84AC10982535EE3C004BCDF2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				84AC109C2535EFEE004BCDF2 /* APIManager */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		84AC109C2535EFEE004BCDF2 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */,
+				84AC10F92535F532004BCDF2 /* GoogleBooksRouter.swift */,
+				84AC10FE2535F54E004BCDF2 /* GoogleBooksAPIManager.swift */,
+				84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		84AC11032535F5D0004BCDF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84AC11042535F5EB004BCDF2 /* RequestModels.swift */,
+				84AC110C2535F5F7004BCDF2 /* GoogleBooksModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84AC113C253670C9004BCDF2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				84AC117725367653004BCDF2 /* ViewModels */,
+				84AC1168253672AC004BCDF2 /* Cells */,
+				84AC1143253670FF004BCDF2 /* Controllers */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		84AC1143253670FF004BCDF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84AC114425367172004BCDF2 /* SearchController.swift */,
+				84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84AC1168253672AC004BCDF2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84AC1169253672D3004BCDF2 /* SearchCell.swift */,
+				84AC116A253672D3004BCDF2 /* SearchCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		84AC117725367653004BCDF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84AC117825367666004BCDF2 /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84AC11B4253686CC004BCDF2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */,
+				84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */,
+				84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */,
+				84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */,
+				84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */,
+				84AC11BA253686CC004BCDF2 /* MarkPro.otf */,
+				84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A2A23ED112BC937710726FBF /* Frameworks */ = {
@@ -388,7 +549,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Glivion;
 				TargetAttributes = {
 					84543FD724169C6800A79018 = {
@@ -430,10 +591,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8454402B2416DC6C00A79018 /* Auth.storyboard in Resources */,
+				84AC11BF253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */,
+				84AC11CB253686CD004BCDF2 /* MarkPro.otf in Resources */,
 				84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */,
+				84AC11C8253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */,
+				84AC11C2253686CC004BCDF2 /* MarkPro-Book.otf in Resources */,
+				84AC11CE253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */,
 				8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */,
+				84AC11BC253686CC004BCDF2 /* MarkPro-Black.otf in Resources */,
+				84AC116E253672D3004BCDF2 /* SearchCell.xib in Resources */,
 				84543FE524169C6A00A79018 /* Assets.xcassets in Resources */,
 				84543FE324169C6800A79018 /* Main.storyboard in Resources */,
+				84AC11C5253686CC004BCDF2 /* MarkPro-BoldItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +610,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AC11CC253686CD004BCDF2 /* MarkPro.otf in Resources */,
+				84AC11C0253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */,
+				84AC11CF253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */,
+				84AC11BD253686CC004BCDF2 /* MarkPro-Black.otf in Resources */,
+				84AC116F253672D3004BCDF2 /* SearchCell.xib in Resources */,
+				84AC11C3253686CC004BCDF2 /* MarkPro-Book.otf in Resources */,
+				84AC11C6253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */,
+				84AC11C9253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +625,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AC11CD253686CD004BCDF2 /* MarkPro.otf in Resources */,
+				84AC11C1253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */,
+				84AC11D0253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */,
+				84AC11BE253686CC004BCDF2 /* MarkPro-Black.otf in Resources */,
+				84AC1170253672D3004BCDF2 /* SearchCell.xib in Resources */,
+				84AC11C4253686CC004BCDF2 /* MarkPro-Book.otf in Resources */,
+				84AC11C7253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */,
+				84AC11CA253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,22 +762,33 @@
 				8454402D2416DC6C00A79018 /* LoginController.swift in Sources */,
 				8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */,
 				845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */,
+				84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */,
+				84AC114525367172004BCDF2 /* SearchController.swift in Sources */,
 				845440282416DC6C00A79018 /* AuthRouter.swift in Sources */,
+				84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */,
+				84AC109E2535EFFE004BCDF2 /* BaseNetworkManager.swift in Sources */,
 				8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */,
 				8454402C2416DC6C00A79018 /* ForgotPassController.swift in Sources */,
 				845440132416A5E500A79018 /* Event.swift in Sources */,
+				84AC110D2535F5F7004BCDF2 /* GoogleBooksModels.swift in Sources */,
 				845440152416A5E500A79018 /* EventBus.swift in Sources */,
 				8454402F2416DC6C00A79018 /* AuthInteractor.swift in Sources */,
+				84AC116B253672D3004BCDF2 /* SearchCell.swift in Sources */,
 				845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */,
 				8454402A2416DC6C00A79018 /* AuthPresenter.swift in Sources */,
 				8454402E2416DC6C00A79018 /* RegisterController.swift in Sources */,
 				8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */,
+				84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */,
 				845440292416DC6C00A79018 /* AuthContract.swift in Sources */,
+				84AC10FF2535F54E004BCDF2 /* GoogleBooksAPIManager.swift in Sources */,
 				8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */,
 				84543FDC24169C6800A79018 /* AppDelegate.swift in Sources */,
+				84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */,
+				84AC11052535F5EB004BCDF2 /* RequestModels.swift in Sources */,
 				8454403D2416EAE600A79018 /* UIViewExtensions.swift in Sources */,
 				84543FDE24169C6800A79018 /* SceneDelegate.swift in Sources */,
 				8454403F2416EAE600A79018 /* UIColorExtensions.swift in Sources */,
+				84AC11AE25367DA5004BCDF2 /* SearchNavController.swift in Sources */,
 				845440402416EAE600A79018 /* AppStoryboards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,8 +798,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */,
+				84AC117A25367666004BCDF2 /* SearchViewModel.swift in Sources */,
+				84AC116C253672D3004BCDF2 /* SearchCell.swift in Sources */,
+				84AC11AF25367DA5004BCDF2 /* SearchNavController.swift in Sources */,
 				8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */,
 				845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */,
+				84AC11D925368735004BCDF2 /* UIFont+Extension.swift in Sources */,
 				845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */,
 				8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */,
 			);
@@ -613,7 +813,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AC117B25367666004BCDF2 /* SearchViewModel.swift in Sources */,
 				84543FFE24169C6A00A79018 /* AuthenticationUITests.swift in Sources */,
+				84AC116D253672D3004BCDF2 /* SearchCell.swift in Sources */,
+				84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */,
+				84AC11B025367DA5004BCDF2 /* SearchNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +890,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -710,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -746,6 +951,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -764,7 +970,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
