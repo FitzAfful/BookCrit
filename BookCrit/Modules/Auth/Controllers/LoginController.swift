@@ -13,17 +13,15 @@ import FirebaseAuth
 import CryptoKit
 import AuthenticationServices
 
-class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate, LoginView {
+class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var googleView: UIView!
     @IBOutlet weak var appleImageView: UIImageView!
 
-    @IBOutlet weak var emailTF: ACFloatingTextfield!
-    @IBOutlet weak var passwordTF: ACFloatingTextfield!
     fileprivate var currentNonce: String?
-
-    var presenter: AuthPresenter!
+    
+    var loginMdoel: LoginViewModel = LoginViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +35,6 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
         bgView.layer.shadowOpacity = 0.7
         bgView.layer.shadowRadius = 4.0
 
-        emailTF.delegate = self
-        passwordTF.delegate = self
 
         let googleViewTap = UITapGestureRecognizer(target: self, action: #selector(self.signInGoogle))
         googleView.addGestureRecognizer(googleViewTap)
@@ -65,18 +61,13 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
             self.showCustomError("Could not sign in. Please try again later.")
             return
         }
-        self.presenter.didLoginWithGoogle(user)
+        self.loginMdoel.firebaseGoogleLogin(with: user, completion: { (errorMessage) in
+            if errorMessage == nil {
+                //something was successful
+            }
+        })
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == passwordTF {
-            self.view.endEditing(true)
-            self.signInEmail(self.passwordTF!)
-        } else {
-            _ = passwordTF.becomeFirstResponder()
-        }
-        return true
-    }
 
     @objc func signInGoogle() {
         GIDSignIn.sharedInstance().delegate = self
@@ -84,21 +75,6 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate,
         GIDSignIn.sharedInstance().signIn()
     }
 
-    @IBAction func signInEmail(_ sender: Any) {
-        let email = self.emailTF.text!
-        let password = self.passwordTF.text!
-
-        if email.isEmpty {
-            self.emailTF.showErrorWithText(errorText: "Enter a valid email address")
-        } else if password.isEmpty {
-            self.passwordTF.showErrorWithText(errorText: "Enter your password")
-        } else if email.isValidEmail() {
-            startLoader()
-            self.presenter.didLoginWithEmail(email, password: password, name: "")
-        } else {
-            emailTF.showErrorWithText(errorText: "Enter a valid email address")
-        }
-    }
 
     func signInApple() {
         if #available(iOS 13, *) {
@@ -227,7 +203,11 @@ extension LoginController: ASAuthorizationControllerDelegate {
                 print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
                 return
             }
-            presenter.didRegisterWithApple(with: idTokenString, nonce: nonce)
+            loginMdoel.firebaseAppleLogin(with: idTokenString, nonce: nonce) { (errorMessage) in
+                if errorMessage == nil {
+                    //success
+                }
+            }
         }
     }
 

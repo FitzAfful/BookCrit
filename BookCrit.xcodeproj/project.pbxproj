@@ -18,14 +18,8 @@
 		845440132416A5E500A79018 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440102416A5E500A79018 /* Event.swift */; };
 		845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440112416A5E500A79018 /* ACFloatingTextField.swift */; };
 		845440152416A5E500A79018 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440122416A5E500A79018 /* EventBus.swift */; };
-		845440282416DC6C00A79018 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454401A2416DC6C00A79018 /* AuthRouter.swift */; };
-		845440292416DC6C00A79018 /* AuthContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454401C2416DC6C00A79018 /* AuthContract.swift */; };
-		8454402A2416DC6C00A79018 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454401E2416DC6C00A79018 /* AuthPresenter.swift */; };
 		8454402B2416DC6C00A79018 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845440202416DC6C00A79018 /* Auth.storyboard */; };
-		8454402C2416DC6C00A79018 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440232416DC6C00A79018 /* ForgotPassController.swift */; };
 		8454402D2416DC6C00A79018 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440242416DC6C00A79018 /* LoginController.swift */; };
-		8454402E2416DC6C00A79018 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440252416DC6C00A79018 /* RegisterController.swift */; };
-		8454402F2416DC6C00A79018 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440272416DC6C00A79018 /* AuthInteractor.swift */; };
 		845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440312416EAE600A79018 /* UIDevice+Extension.swift */; };
 		8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440322416EAE600A79018 /* StringExtensions.swift */; };
 		8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440342416EAE600A79018 /* UIViewControllerExtensions.swift */; };
@@ -83,6 +77,7 @@
 		84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
 		84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */; };
 		89032638A7157EE0D39BCABA /* Pods_BookCrit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85C4AF7D94DB016A430F19 /* Pods_BookCrit.framework */; };
+		D5D7FEB925ADB59A008FE28D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,14 +119,8 @@
 		845440102416A5E500A79018 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		845440112416A5E500A79018 /* ACFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACFloatingTextField.swift; sourceTree = "<group>"; };
 		845440122416A5E500A79018 /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
-		8454401A2416DC6C00A79018 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		8454401C2416DC6C00A79018 /* AuthContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContract.swift; sourceTree = "<group>"; };
-		8454401E2416DC6C00A79018 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		845440212416DC6C00A79018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
-		845440232416DC6C00A79018 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		845440242416DC6C00A79018 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		845440252416DC6C00A79018 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		845440272416DC6C00A79018 /* AuthInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		845440312416EAE600A79018 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		845440322416EAE600A79018 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		845440342416EAE600A79018 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -165,6 +154,7 @@
 		84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BlackItalic.otf"; sourceTree = "<group>"; };
 		84AC11D725368735004BCDF2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F84AFA977D1BC8AC1A29BA84 /* Pods-BookCrit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCrit.debug.xcconfig"; path = "Target Support Files/Pods-BookCrit/Pods-BookCrit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,38 +284,12 @@
 		845440182416DC6C00A79018 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				845440192416DC6C00A79018 /* Routers */,
-				8454401B2416DC6C00A79018 /* Contracts */,
-				8454401D2416DC6C00A79018 /* Presenters */,
-				8454401F2416DC6C00A79018 /* View */,
+				D5D7FEB525ADA974008FE28D /* ViewModels */,
+				D5D7FEB625ADA9AF008FE28D /* Cells */,
 				845440222416DC6C00A79018 /* Controllers */,
-				845440262416DC6C00A79018 /* Interactor */,
+				8454401F2416DC6C00A79018 /* View */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		845440192416DC6C00A79018 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				8454401A2416DC6C00A79018 /* AuthRouter.swift */,
-			);
-			path = Routers;
-			sourceTree = "<group>";
-		};
-		8454401B2416DC6C00A79018 /* Contracts */ = {
-			isa = PBXGroup;
-			children = (
-				8454401C2416DC6C00A79018 /* AuthContract.swift */,
-			);
-			path = Contracts;
-			sourceTree = "<group>";
-		};
-		8454401D2416DC6C00A79018 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				8454401E2416DC6C00A79018 /* AuthPresenter.swift */,
-			);
-			path = Presenters;
 			sourceTree = "<group>";
 		};
 		8454401F2416DC6C00A79018 /* View */ = {
@@ -339,19 +303,9 @@
 		845440222416DC6C00A79018 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				845440232416DC6C00A79018 /* ForgotPassController.swift */,
 				845440242416DC6C00A79018 /* LoginController.swift */,
-				845440252416DC6C00A79018 /* RegisterController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		845440262416DC6C00A79018 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				845440272416DC6C00A79018 /* AuthInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		845440302416EAE600A79018 /* Extensions */ = {
@@ -478,6 +432,21 @@
 				3302B979EA33D04A8E8D7013 /* Pods_BookCritTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5D7FEB525ADA974008FE28D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5D7FEB625ADA9AF008FE28D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -764,25 +733,20 @@
 				845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */,
 				84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */,
 				84AC114525367172004BCDF2 /* SearchController.swift in Sources */,
-				845440282416DC6C00A79018 /* AuthRouter.swift in Sources */,
 				84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */,
 				84AC109E2535EFFE004BCDF2 /* BaseNetworkManager.swift in Sources */,
 				8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */,
-				8454402C2416DC6C00A79018 /* ForgotPassController.swift in Sources */,
 				845440132416A5E500A79018 /* Event.swift in Sources */,
 				84AC110D2535F5F7004BCDF2 /* GoogleBooksModels.swift in Sources */,
 				845440152416A5E500A79018 /* EventBus.swift in Sources */,
-				8454402F2416DC6C00A79018 /* AuthInteractor.swift in Sources */,
 				84AC116B253672D3004BCDF2 /* SearchCell.swift in Sources */,
 				845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */,
-				8454402A2416DC6C00A79018 /* AuthPresenter.swift in Sources */,
-				8454402E2416DC6C00A79018 /* RegisterController.swift in Sources */,
 				8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */,
 				84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */,
-				845440292416DC6C00A79018 /* AuthContract.swift in Sources */,
 				84AC10FF2535F54E004BCDF2 /* GoogleBooksAPIManager.swift in Sources */,
 				8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */,
 				84543FDC24169C6800A79018 /* AppDelegate.swift in Sources */,
+				D5D7FEB925ADB59A008FE28D /* LoginViewModel.swift in Sources */,
 				84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */,
 				84AC11052535F5EB004BCDF2 /* RequestModels.swift in Sources */,
 				8454403D2416EAE600A79018 /* UIViewExtensions.swift in Sources */,
