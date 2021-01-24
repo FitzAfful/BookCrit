@@ -18,10 +18,11 @@ class BaseViewController: UIViewController {
 
     func startLoader(message: String = "") {
         self.view.endEditing(true)
-        FTIndicator.showProgress(withMessage: "Signing In")
+        FTIndicator.showProgress(withMessage: message)
     }
 
     func showAlert(title: String, message: String, completionHandler: (() -> Void)? = nil, okButtonText: String = "Okay") {
+        self.cancelLoader()
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: okButtonText, style: .default, handler: {(_)  in
             if let handler = completionHandler {

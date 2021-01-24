@@ -15,7 +15,6 @@
 		84543FE524169C6A00A79018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE424169C6A00A79018 /* Assets.xcassets */; };
 		84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE624169C6A00A79018 /* LaunchScreen.storyboard */; };
 		8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8454400B2416A35300A79018 /* GoogleService-Info.plist */; };
-		8454402B2416DC6C00A79018 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845440202416DC6C00A79018 /* Auth.storyboard */; };
 		8454402D2416DC6C00A79018 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440242416DC6C00A79018 /* LoginController.swift */; };
 		8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440322416EAE600A79018 /* StringExtensions.swift */; };
 		8454403C2416EAE600A79018 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440342416EAE600A79018 /* UIViewController.swift */; };
@@ -26,6 +25,7 @@
 		8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404B2416FC0000A79018 /* FirebaseService.swift */; };
 		845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440502417049D00A79018 /* FirebaseServiceStub.swift */; };
 		8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */; };
+		846F7F4E25BDB349004E42AB /* CryptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7F4D25BDB349004E42AB /* CryptHelper.swift */; };
 		8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */; };
 		8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */; };
 		84AC109E2535EFFE004BCDF2 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */; };
@@ -92,7 +92,6 @@
 		84543FEE24169C6A00A79018 /* LibTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84543FF424169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8454400B2416A35300A79018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		845440212416DC6C00A79018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		845440242416DC6C00A79018 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		845440322416EAE600A79018 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		845440342416EAE600A79018 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		845440502417049D00A79018 /* FirebaseServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceStub.swift; sourceTree = "<group>"; };
 		8454405224170E2E00A79018 /* LibTrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LibTrack.entitlements; sourceTree = "<group>"; };
 		8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTests.swift; sourceTree = "<group>"; };
+		846F7F4D25BDB349004E42AB /* CryptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptHelper.swift; sourceTree = "<group>"; };
 		8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
 		8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterControllerTests.swift; sourceTree = "<group>"; };
 		84AC109D2535EFFE004BCDF2 /* BaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
@@ -235,29 +235,20 @@
 		845440182416DC6C00A79018 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				8454401F2416DC6C00A79018 /* View */,
-				845440222416DC6C00A79018 /* Controllers */,
-				D5D7FEB525ADA974008FE28D /* ViewModels */,
+				8454401F2416DC6C00A79018 /* Login */,
 				84E0719325BD978200087972 /* AuthNavigationController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		8454401F2416DC6C00A79018 /* View */ = {
+		8454401F2416DC6C00A79018 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				845440202416DC6C00A79018 /* Auth.storyboard */,
 				84E071C225BD9CFF00087972 /* LoginView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		845440222416DC6C00A79018 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
 				845440242416DC6C00A79018 /* LoginController.swift */,
+				D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */,
 			);
-			path = Controllers;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		845440302416EAE600A79018 /* Extensions */ = {
@@ -377,6 +368,7 @@
 			children = (
 				84E0715825BD936D00087972 /* ViewHelpers */,
 				8454404B2416FC0000A79018 /* FirebaseService.swift */,
+				846F7F4D25BDB349004E42AB /* CryptHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -426,14 +418,6 @@
 				E5B8E57C50C37767077F2554 /* Pods_LibTrackTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D5D7FEB525ADA974008FE28D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,7 +507,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8454402B2416DC6C00A79018 /* Auth.storyboard in Resources */,
 				84AC11BF253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */,
 				84AC11CB253686CD004BCDF2 /* MarkPro.otf in Resources */,
 				84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */,
@@ -698,6 +681,7 @@
 				84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */,
 				84AC11052535F5EB004BCDF2 /* RequestModels.swift in Sources */,
 				84E0718025BD960400087972 /* UIImageView.swift in Sources */,
+				846F7F4E25BDB349004E42AB /* CryptHelper.swift in Sources */,
 				8454403D2416EAE600A79018 /* UIView.swift in Sources */,
 				84543FDE24169C6800A79018 /* SceneDelegate.swift in Sources */,
 				8454403F2416EAE600A79018 /* UIColor.swift in Sources */,
@@ -744,14 +728,6 @@
 				84543FE724169C6A00A79018 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		845440202416DC6C00A79018 /* Auth.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				845440212416DC6C00A79018 /* Base */,
-			);
-			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -10,18 +10,16 @@ import UIKit
 import FTIndicator
 import GoogleSignIn
 import FirebaseAuth
-import CryptoKit
 import AuthenticationServices
 
 class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate {
 
     var loginView: LoginView?
-    var loginMdoel: LoginViewModel = LoginViewModel()
-
-    fileprivate var currentNonce: String?
+    var loginModel: LoginViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginModel = LoginViewModel(view: self)
         createViews()
     }
 
@@ -43,12 +41,10 @@ class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate 
     }
 
     func appleButtonTapped() {
-        let nonce = randomNonceString()
-        currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        request.nonce = sha256(nonce)
+        request.nonce = loginModel?.get256Sha()
 
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
@@ -59,65 +55,11 @@ class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         startLoader()
         if error != nil {
-            cancelLoader()
             self.showAlert(title: "Error", message: "Could not sign in. Please try again later.")
             return
         }
 
-        self.loginMdoel.firebaseGoogleLogin(with: user, completion: { (errorMessage) in
-            if errorMessage == nil {
-                // something was successful
-            }
-        })
-    }
-
-    @available(iOS 13, *)
-    private func sha256(_ input: String) -> String {
-        let inputData = Data(input.utf8)
-        let hashedData = SHA256.hash(data: inputData)
-        let hashString = hashedData.compactMap {
-            return String(format: "%02x", $0)
-        }.joined()
-
-        return hashString
-    }
-
-    func presentHomeScreen() {
-        FTIndicator.dismissProgress()
-        self.showAlert(title: "Success", message: "Successful Login")
-        // Move to Tabs / Search
-    }
-
-    private func randomNonceString(length: Int = 32) -> String {
-        precondition(length > 0)
-        let charset: [Character] =
-            Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
-        var result = ""
-        var remainingLength = length
-
-        while remainingLength > 0 {
-            let randoms: [UInt8] = (0 ..< 16).map { _ in
-                var random: UInt8 = 0
-                let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
-                if errorCode != errSecSuccess {
-                    fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
-                }
-                return random
-            }
-
-            randoms.forEach { random in
-                if remainingLength == 0 {
-                    return
-                }
-
-                if random < charset.count {
-                    result.append(charset[Int(random)])
-                    remainingLength -= 1
-                }
-            }
-        }
-
-        return result
+        self.loginModel?.firebaseGoogleLogin(with: user)
     }
 }
 
@@ -133,9 +75,6 @@ extension LoginController: ASAuthorizationControllerDelegate {
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            guard let nonce = currentNonce else {
-                fatalError("Invalid state: A login callback was received, but no login request was sent.")
-            }
             guard let appleIDToken = appleIDCredential.identityToken else {
                 print("Unable to fetch identity token")
                 return
@@ -144,11 +83,7 @@ extension LoginController: ASAuthorizationControllerDelegate {
                 print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
                 return
             }
-            loginMdoel.firebaseAppleLogin(with: idTokenString, nonce: nonce) { (errorMessage) in
-                if errorMessage == nil {
-                    // success
-                }
-            }
+            loginModel?.firebaseAppleLogin(with: idTokenString)
         }
     }
 

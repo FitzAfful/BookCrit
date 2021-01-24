@@ -13,7 +13,7 @@ class LoginControllerTests: XCTestCase {
 
     var loginController : LoginController!
     override func setUp() {
-        loginController = (storyboard.instantiateInitialViewController() as! LoginController)
+        loginController = LoginController()
         loginController.loadView()
     }
 
