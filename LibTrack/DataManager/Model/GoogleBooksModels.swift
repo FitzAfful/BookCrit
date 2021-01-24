@@ -30,7 +30,7 @@ public struct GoogleBookItem: Codable {
     }
 
     func getBook() -> Book {
-        return Book(id: id, title: volumeInfo.title, authors: volumeInfo.authors ?? [], details: (volumeInfo.description ?? volumeInfo.subtitle) ?? "" , categories: volumeInfo.categories ?? [], publishedDate: volumeInfo.publishedDate, imageUrl: volumeInfo.imageLinks?.thumbnail)
+        return Book(id: id, title: volumeInfo.title, authors: volumeInfo.authors ?? [], details: (volumeInfo.description ?? volumeInfo.subtitle) ?? "", categories: volumeInfo.categories ?? [], publishedDate: volumeInfo.publishedDate, imageUrl: volumeInfo.imageLinks?.thumbnail)
     }
 }
 

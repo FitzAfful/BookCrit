@@ -9,14 +9,17 @@
 import Foundation
 import UIKit
 
-
 extension UIColor {
-	
-	convenience init(hex: String) {
-		self.init(hex: hex, alpha:1)
-	}
-	
-	convenience init(hex: String, alpha: CGFloat = 1.0) {
+
+    static let primary = UIColor(named: "primary")
+    static let dark = UIColor(named: "dark")
+    static let light = UIColor(named: "light")
+
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1)
+    }
+
+    convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
 
         if hexFormatted.hasPrefix("#") {

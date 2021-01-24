@@ -17,19 +17,18 @@ class LoginViewModel {
     func firebaseGoogleLogin(with googleUser: GIDGoogleUser, completion: @escaping (String?) -> Void) {
         let credential = firebaseService.getCredentialFromGoogle(with: googleUser)
         firebaseService.loginUser(credential: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: nil, email: nil, password: nil, completion: completion)
+            self.signedIn(error: error, result: result, completion: completion)
         }
     }
 
     func firebaseAppleLogin(with idToken: String, nonce: String, completion: @escaping (String?) -> Void) {
         let credential = firebaseService.getCredentialFromApple(with: idToken, nonce: nonce)
         firebaseService.loginUser(credential: credential) { (result, error) in
-            self.signedIn(error: error, result: result, name: nil, email: nil, password: nil, completion: completion)
+            self.signedIn(error: error, result: result, completion: completion)
         }
     }
 
-
-    func signedIn(error: Error?, result: FirebaseAuthResult?, name: String?, email: String?, password: String?, completion: @escaping (String?) -> Void) {
+    func signedIn(error: Error?, result: FirebaseAuthResult?, completion: @escaping (String?) -> Void) {
         if error != nil {
             if let errorCode = AuthErrorCode(rawValue: error!._code) {
                 switch errorCode {
@@ -47,12 +46,7 @@ class LoginViewModel {
             }
             return
         }
-
-        if email != nil {
-            firebaseService.updateCurrentUserDetails(email: email!, name: name!, photoURL: "https://example.com/jane-q-user/profile.jpg")
-        }
-
-//        completion(nil)
+        completion(nil)
     }
 
 }

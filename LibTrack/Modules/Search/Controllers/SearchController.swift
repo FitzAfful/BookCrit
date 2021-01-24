@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
+class SearchController: BaseViewController, UISearchResultsUpdating, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -48,7 +48,7 @@ class SearchController: UIViewController, UISearchResultsUpdating, UISearchBarDe
         print("SearchBar text: \(searchText)")
         if !searchText.isEmpty {
             if searchText.count >= 4 {
-                //self.search(word: searchText)
+                // self.search(word: searchText)
             }
         }
     }
@@ -61,7 +61,7 @@ class SearchController: UIViewController, UISearchResultsUpdating, UISearchBarDe
 
         viewModel.searchBook(word: word) { (_, errorMessage, searchedWord) in
             if let error = errorMessage {
-                self.showAlert(withTitle: "Error", message: error)
+                self.showAlert(title: "Error", message: error)
                 return
             }
 
@@ -81,11 +81,6 @@ class SearchController: UIViewController, UISearchResultsUpdating, UISearchBarDe
         print("isSearching: \(searchController.isActive && !(searchController.searchBar.text?.isEmpty ?? true))")
     }
 
-    func initializeFromStoryboard() -> SearchController {
-        let controller = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: SearchController.storyboardID)
-        guard let myController = controller as? SearchController else { fatalError() }
-        return myController
-    }
 }
 
 extension SearchController: UITableViewDataSource, UITableViewDelegate {
@@ -109,6 +104,6 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //To Book Details
+        // To Book Details
     }
 }

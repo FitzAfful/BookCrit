@@ -14,20 +14,14 @@
 		84543FE324169C6800A79018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE124169C6800A79018 /* Main.storyboard */; };
 		84543FE524169C6A00A79018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE424169C6A00A79018 /* Assets.xcassets */; };
 		84543FE824169C6A00A79018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84543FE624169C6A00A79018 /* LaunchScreen.storyboard */; };
-		84543FFE24169C6A00A79018 /* AuthenticationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */; };
 		8454400C2416A35300A79018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8454400B2416A35300A79018 /* GoogleService-Info.plist */; };
-		845440132416A5E500A79018 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440102416A5E500A79018 /* Event.swift */; };
-		845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440112416A5E500A79018 /* ACFloatingTextField.swift */; };
-		845440152416A5E500A79018 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440122416A5E500A79018 /* EventBus.swift */; };
 		8454402B2416DC6C00A79018 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845440202416DC6C00A79018 /* Auth.storyboard */; };
 		8454402D2416DC6C00A79018 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440242416DC6C00A79018 /* LoginController.swift */; };
-		845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440312416EAE600A79018 /* UIDevice+Extension.swift */; };
 		8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440322416EAE600A79018 /* StringExtensions.swift */; };
-		8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440342416EAE600A79018 /* UIViewControllerExtensions.swift */; };
-		8454403D2416EAE600A79018 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440352416EAE600A79018 /* UIViewExtensions.swift */; };
+		8454403C2416EAE600A79018 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440342416EAE600A79018 /* UIViewController.swift */; };
+		8454403D2416EAE600A79018 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440352416EAE600A79018 /* UIView.swift */; };
 		8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440362416EAE600A79018 /* UserDefaultExtensions.swift */; };
-		8454403F2416EAE600A79018 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440372416EAE600A79018 /* UIColorExtensions.swift */; };
-		845440402416EAE600A79018 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440382416EAE600A79018 /* AppStoryboards.swift */; };
+		8454403F2416EAE600A79018 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440372416EAE600A79018 /* UIColor.swift */; };
 		845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440412416F5E000A79018 /* AuthenticationErrorTests.swift */; };
 		8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454404B2416FC0000A79018 /* FirebaseService.swift */; };
 		845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845440502417049D00A79018 /* FirebaseServiceStub.swift */; };
@@ -42,53 +36,37 @@
 		84AC114525367172004BCDF2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC114425367172004BCDF2 /* SearchController.swift */; };
 		84AC116B253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
 		84AC116C253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
-		84AC116D253672D3004BCDF2 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC1169253672D3004BCDF2 /* SearchCell.swift */; };
 		84AC116E253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
 		84AC116F253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
-		84AC1170253672D3004BCDF2 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AC116A253672D3004BCDF2 /* SearchCell.xib */; };
 		84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
 		84AC117A25367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
-		84AC117B25367666004BCDF2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC117825367666004BCDF2 /* SearchViewModel.swift */; };
-		84AC11AE25367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
-		84AC11AF25367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
-		84AC11B025367DA5004BCDF2 /* SearchNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */; };
 		84AC11BC253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
 		84AC11BD253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
-		84AC11BE253686CC004BCDF2 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */; };
 		84AC11BF253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
 		84AC11C0253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
-		84AC11C1253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */; };
 		84AC11C2253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
 		84AC11C3253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
-		84AC11C4253686CC004BCDF2 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */; };
 		84AC11C5253686CC004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
 		84AC11C6253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
-		84AC11C7253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B8253686CC004BCDF2 /* MarkPro-BoldItalic.otf */; };
 		84AC11C8253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
 		84AC11C9253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
-		84AC11CA253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */; };
 		84AC11CB253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
 		84AC11CC253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
-		84AC11CD253686CD004BCDF2 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BA253686CC004BCDF2 /* MarkPro.otf */; };
 		84AC11CE253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
 		84AC11CF253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
-		84AC11D0253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */; };
-		84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
-		84AC11D925368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
-		84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont+Extension.swift */; };
+		84AC11D825368735004BCDF2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont.swift */; };
+		84AC11D925368735004BCDF2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11D725368735004BCDF2 /* UIFont.swift */; };
 		84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */; };
+		84E0715125BD92FF00087972 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0715025BD92FF00087972 /* SearchNavigationController.swift */; };
+		84E0715A25BD938100087972 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0715925BD938100087972 /* BaseViewController.swift */; };
+		84E0718025BD960400087972 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0717F25BD960400087972 /* UIImageView.swift */; };
+		84E0719425BD978200087972 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0719325BD978200087972 /* AuthNavigationController.swift */; };
+		84E071C325BD9CFF00087972 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E071C225BD9CFF00087972 /* LoginView.swift */; };
 		D5D7FEB925ADB59A008FE28D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		84543FEF24169C6A00A79018 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84543FD024169C6800A79018 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84543FD724169C6800A79018;
-			remoteInfo = BookCrit;
-		};
-		84543FFA24169C6A00A79018 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84543FD024169C6800A79018 /* Project object */;
 			proxyType = 1;
@@ -113,22 +91,14 @@
 		84543FE924169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84543FEE24169C6A00A79018 /* LibTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84543FF424169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84543FF924169C6A00A79018 /* LibTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUITests.swift; sourceTree = "<group>"; };
-		84543FFF24169C6A00A79018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8454400B2416A35300A79018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		845440102416A5E500A79018 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		845440112416A5E500A79018 /* ACFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACFloatingTextField.swift; sourceTree = "<group>"; };
-		845440122416A5E500A79018 /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		845440212416DC6C00A79018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		845440242416DC6C00A79018 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		845440312416EAE600A79018 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		845440322416EAE600A79018 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		845440342416EAE600A79018 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		845440352416EAE600A79018 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		845440342416EAE600A79018 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		845440352416EAE600A79018 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		845440362416EAE600A79018 /* UserDefaultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultExtensions.swift; sourceTree = "<group>"; };
-		845440372416EAE600A79018 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		845440382416EAE600A79018 /* AppStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
+		845440372416EAE600A79018 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		845440412416F5E000A79018 /* AuthenticationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorTests.swift; sourceTree = "<group>"; };
 		8454404B2416FC0000A79018 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		845440502417049D00A79018 /* FirebaseServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceStub.swift; sourceTree = "<group>"; };
@@ -145,7 +115,6 @@
 		84AC1169253672D3004BCDF2 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		84AC116A253672D3004BCDF2 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		84AC117825367666004BCDF2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavController.swift; sourceTree = "<group>"; };
 		84AC11B5253686CC004BCDF2 /* MarkPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Black.otf"; sourceTree = "<group>"; };
 		84AC11B6253686CC004BCDF2 /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
 		84AC11B7253686CC004BCDF2 /* MarkPro-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Book.otf"; sourceTree = "<group>"; };
@@ -153,8 +122,13 @@
 		84AC11B9253686CC004BCDF2 /* MarkPro-TestFont.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-TestFont.otf"; sourceTree = "<group>"; };
 		84AC11BA253686CC004BCDF2 /* MarkPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkPro.otf; sourceTree = "<group>"; };
 		84AC11BB253686CC004BCDF2 /* MarkPro-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BlackItalic.otf"; sourceTree = "<group>"; };
-		84AC11D725368735004BCDF2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		84AC11D725368735004BCDF2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		84AC11DE25368D4D004BCDF2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		84E0715025BD92FF00087972 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		84E0715925BD938100087972 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		84E0717F25BD960400087972 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		84E0719325BD978200087972 /* AuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
+		84E071C225BD9CFF00087972 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC7043EBA8550D3C4D67632A /* Pods-LibTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTrack.debug.xcconfig"; path = "Target Support Files/Pods-LibTrack/Pods-LibTrack.debug.xcconfig"; sourceTree = "<group>"; };
 		D5D7FEB825ADB59A008FE28D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E5B8E57C50C37767077F2554 /* Pods_LibTrackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibTrackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,13 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E8421D52250AD1DCE0AB73 /* Pods_LibTrackTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84543FF624169C6A00A79018 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +176,6 @@
 			children = (
 				84543FDA24169C6800A79018 /* LibTrack */,
 				84543FF124169C6A00A79018 /* LibTrackTests */,
-				84543FFC24169C6A00A79018 /* LibTrackUITests */,
 				84543FD924169C6800A79018 /* Products */,
 				2AA43343F324F09C3A25F5D1 /* Pods */,
 				A2A23ED112BC937710726FBF /* Frameworks */,
@@ -221,7 +187,6 @@
 			children = (
 				84543FD824169C6800A79018 /* LibTrack.app */,
 				84543FEE24169C6A00A79018 /* LibTrackTests.xctest */,
-				84543FF924169C6A00A79018 /* LibTrackUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,19 +194,17 @@
 		84543FDA24169C6800A79018 /* LibTrack */ = {
 			isa = PBXGroup;
 			children = (
-				84AC11032535F5D0004BCDF2 /* Model */,
+				84E0714825BD81AC00087972 /* Helpers */,
+				845440302416EAE600A79018 /* Extensions */,
+				84E0714325BD7FEF00087972 /* SupportingFiles */,
 				84AC10982535EE3C004BCDF2 /* DataManager */,
 				845440172416DC6C00A79018 /* Modules */,
-				8454400F2416A5E500A79018 /* Utilities */,
-				84AC11B4253686CC004BCDF2 /* Fonts */,
 				8454400B2416A35300A79018 /* GoogleService-Info.plist */,
 				84543FDB24169C6800A79018 /* AppDelegate.swift */,
 				84543FDD24169C6800A79018 /* SceneDelegate.swift */,
 				84543FE124169C6800A79018 /* Main.storyboard */,
-				84543FE424169C6A00A79018 /* Assets.xcassets */,
 				84543FE624169C6A00A79018 /* LaunchScreen.storyboard */,
 				84543FE924169C6A00A79018 /* Info.plist */,
-				8454404B2416FC0000A79018 /* FirebaseService.swift */,
 				8454405224170E2E00A79018 /* LibTrack.entitlements */,
 			);
 			path = LibTrack;
@@ -250,40 +213,20 @@
 		84543FF124169C6A00A79018 /* LibTrackTests */ = {
 			isa = PBXGroup;
 			children = (
-				8454404F2417048B00A79018 /* Authentication */,
+				84E0714C25BD820600087972 /* Extensions */,
+				84E0714B25BD81E700087972 /* Modules */,
+				84E0714A25BD81DF00087972 /* DataManager */,
+				84E0714925BD81D900087972 /* Helpers */,
 				84543FF424169C6A00A79018 /* Info.plist */,
 				845440412416F5E000A79018 /* AuthenticationErrorTests.swift */,
 			);
 			path = LibTrackTests;
 			sourceTree = "<group>";
 		};
-		84543FFC24169C6A00A79018 /* LibTrackUITests */ = {
-			isa = PBXGroup;
-			children = (
-				84543FFD24169C6A00A79018 /* AuthenticationUITests.swift */,
-				84543FFF24169C6A00A79018 /* Info.plist */,
-			);
-			path = LibTrackUITests;
-			sourceTree = "<group>";
-		};
-		8454400F2416A5E500A79018 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				845440382416EAE600A79018 /* AppStoryboards.swift */,
-				845440302416EAE600A79018 /* Extensions */,
-				845440102416A5E500A79018 /* Event.swift */,
-				845440112416A5E500A79018 /* ACFloatingTextField.swift */,
-				845440122416A5E500A79018 /* EventBus.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		845440172416DC6C00A79018 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				84AC113C253670C9004BCDF2 /* Search */,
-				84AC10962535EE08004BCDF2 /* Home */,
-				84AC10972535EE18004BCDF2 /* Tabs */,
 				845440182416DC6C00A79018 /* Auth */,
 			);
 			path = Modules;
@@ -292,10 +235,10 @@
 		845440182416DC6C00A79018 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D5D7FEB525ADA974008FE28D /* ViewModels */,
-				D5D7FEB625ADA9AF008FE28D /* Cells */,
-				845440222416DC6C00A79018 /* Controllers */,
 				8454401F2416DC6C00A79018 /* View */,
+				845440222416DC6C00A79018 /* Controllers */,
+				D5D7FEB525ADA974008FE28D /* ViewModels */,
+				84E0719325BD978200087972 /* AuthNavigationController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -304,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				845440202416DC6C00A79018 /* Auth.storyboard */,
+				84E071C225BD9CFF00087972 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,46 +263,32 @@
 		845440302416EAE600A79018 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				845440312416EAE600A79018 /* UIDevice+Extension.swift */,
 				845440322416EAE600A79018 /* StringExtensions.swift */,
-				845440342416EAE600A79018 /* UIViewControllerExtensions.swift */,
-				845440352416EAE600A79018 /* UIViewExtensions.swift */,
+				845440342416EAE600A79018 /* UIViewController.swift */,
+				845440352416EAE600A79018 /* UIView.swift */,
 				845440362416EAE600A79018 /* UserDefaultExtensions.swift */,
-				845440372416EAE600A79018 /* UIColorExtensions.swift */,
-				84AC11D725368735004BCDF2 /* UIFont+Extension.swift */,
+				845440372416EAE600A79018 /* UIColor.swift */,
+				84AC11D725368735004BCDF2 /* UIFont.swift */,
+				84E0717F25BD960400087972 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8454404F2417048B00A79018 /* Authentication */ = {
+		8454404F2417048B00A79018 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				845440502417049D00A79018 /* FirebaseServiceStub.swift */,
 				8485B3BF241727C200BEC6FA /* LoginControllerTests.swift */,
 				8462DF4B2417A1CD009258A9 /* ForgotPasswordTests.swift */,
 				8485B3C12417318000BEC6FA /* RegisterControllerTests.swift */,
 			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		84AC10962535EE08004BCDF2 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		84AC10972535EE18004BCDF2 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tabs;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		84AC10982535EE3C004BCDF2 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
 				84AC109C2535EFEE004BCDF2 /* APIManager */,
+				84AC11032535F5D0004BCDF2 /* Model */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -389,6 +319,7 @@
 				84AC117725367653004BCDF2 /* ViewModels */,
 				84AC1168253672AC004BCDF2 /* Cells */,
 				84AC1143253670FF004BCDF2 /* Controllers */,
+				84E0715025BD92FF00087972 /* SearchNavigationController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -397,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				84AC114425367172004BCDF2 /* SearchController.swift */,
-				84AC11AD25367DA5004BCDF2 /* SearchNavController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -433,6 +363,62 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84E0714325BD7FEF00087972 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84543FE424169C6A00A79018 /* Assets.xcassets */,
+				84AC11B4253686CC004BCDF2 /* Fonts */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		84E0714825BD81AC00087972 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84E0715825BD936D00087972 /* ViewHelpers */,
+				8454404B2416FC0000A79018 /* FirebaseService.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84E0714925BD81D900087972 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				845440502417049D00A79018 /* FirebaseServiceStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84E0714A25BD81DF00087972 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		84E0714B25BD81E700087972 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8454404F2417048B00A79018 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		84E0714C25BD820600087972 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84E0715825BD936D00087972 /* ViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				84E0715925BD938100087972 /* BaseViewController.swift */,
+			);
+			path = ViewHelpers;
+			sourceTree = "<group>";
+		};
 		A2A23ED112BC937710726FBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,13 +436,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		D5D7FEB625ADA9AF008FE28D /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +449,7 @@
 				84543FD624169C6800A79018 /* Resources */,
 				7797B8E872E70E36AD226C8D /* [CP] Embed Pods Frameworks */,
 				F8984C0E6EDF9AFFDFCA8CB3 /* [CP] Copy Pods Resources */,
+				84E071B725BD986C00087972 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -500,24 +480,6 @@
 			productReference = 84543FEE24169C6A00A79018 /* LibTrackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		84543FF824169C6A00A79018 /* LibTrackUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8454400824169C6A00A79018 /* Build configuration list for PBXNativeTarget "LibTrackUITests" */;
-			buildPhases = (
-				84543FF524169C6A00A79018 /* Sources */,
-				84543FF624169C6A00A79018 /* Frameworks */,
-				84543FF724169C6A00A79018 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84543FFB24169C6A00A79018 /* PBXTargetDependency */,
-			);
-			name = LibTrackUITests;
-			productName = BookCritUITests;
-			productReference = 84543FF924169C6A00A79018 /* LibTrackUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -532,10 +494,6 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					84543FED24169C6A00A79018 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 84543FD724169C6800A79018;
-					};
-					84543FF824169C6A00A79018 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 84543FD724169C6800A79018;
 					};
@@ -556,7 +514,6 @@
 			targets = (
 				84543FD724169C6800A79018 /* LibTrack */,
 				84543FED24169C6A00A79018 /* LibTrackTests */,
-				84543FF824169C6A00A79018 /* LibTrackUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -597,21 +554,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84543FF724169C6A00A79018 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84AC11CD253686CD004BCDF2 /* MarkPro.otf in Resources */,
-				84AC11C1253686CC004BCDF2 /* MarkPro-Bold.otf in Resources */,
-				84AC11D0253686CD004BCDF2 /* MarkPro-BlackItalic.otf in Resources */,
-				84AC11BE253686CC004BCDF2 /* MarkPro-Black.otf in Resources */,
-				84AC1170253672D3004BCDF2 /* SearchCell.xib in Resources */,
-				84AC11C4253686CC004BCDF2 /* MarkPro-Book.otf in Resources */,
-				84AC11C7253686CD004BCDF2 /* MarkPro-BoldItalic.otf in Resources */,
-				84AC11CA253686CD004BCDF2 /* MarkPro-TestFont.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -648,6 +590,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibTrack/Pods-LibTrack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		84E071B725BD986C00087972 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		D4F4C1AF8E9797B18E7BEDF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -718,31 +677,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8454402D2416DC6C00A79018 /* LoginController.swift in Sources */,
-				8454403C2416EAE600A79018 /* UIViewControllerExtensions.swift in Sources */,
-				845440392416EAE600A79018 /* UIDevice+Extension.swift in Sources */,
+				8454403C2416EAE600A79018 /* UIViewController.swift in Sources */,
 				84AC11DF25368D4D004BCDF2 /* NetworkConstants.swift in Sources */,
 				84AC114525367172004BCDF2 /* SearchController.swift in Sources */,
 				84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */,
 				84AC109E2535EFFE004BCDF2 /* BaseNetworkManager.swift in Sources */,
 				8454404C2416FC0000A79018 /* FirebaseService.swift in Sources */,
-				845440132416A5E500A79018 /* Event.swift in Sources */,
 				84AC110D2535F5F7004BCDF2 /* GoogleBooksModels.swift in Sources */,
-				845440152416A5E500A79018 /* EventBus.swift in Sources */,
 				84AC116B253672D3004BCDF2 /* SearchCell.swift in Sources */,
-				845440142416A5E500A79018 /* ACFloatingTextField.swift in Sources */,
 				8454403E2416EAE600A79018 /* UserDefaultExtensions.swift in Sources */,
-				84AC11D825368735004BCDF2 /* UIFont+Extension.swift in Sources */,
+				84E0715125BD92FF00087972 /* SearchNavigationController.swift in Sources */,
+				84AC11D825368735004BCDF2 /* UIFont.swift in Sources */,
 				84AC10FF2535F54E004BCDF2 /* GoogleBooksAPIManager.swift in Sources */,
+				84E071C325BD9CFF00087972 /* LoginView.swift in Sources */,
+				84E0715A25BD938100087972 /* BaseViewController.swift in Sources */,
 				8454403A2416EAE600A79018 /* StringExtensions.swift in Sources */,
+				84E0719425BD978200087972 /* AuthNavigationController.swift in Sources */,
 				84543FDC24169C6800A79018 /* AppDelegate.swift in Sources */,
 				D5D7FEB925ADB59A008FE28D /* LoginViewModel.swift in Sources */,
 				84AC117925367666004BCDF2 /* SearchViewModel.swift in Sources */,
 				84AC11052535F5EB004BCDF2 /* RequestModels.swift in Sources */,
-				8454403D2416EAE600A79018 /* UIViewExtensions.swift in Sources */,
+				84E0718025BD960400087972 /* UIImageView.swift in Sources */,
+				8454403D2416EAE600A79018 /* UIView.swift in Sources */,
 				84543FDE24169C6800A79018 /* SceneDelegate.swift in Sources */,
-				8454403F2416EAE600A79018 /* UIColorExtensions.swift in Sources */,
-				84AC11AE25367DA5004BCDF2 /* SearchNavController.swift in Sources */,
-				845440402416EAE600A79018 /* AppStoryboards.swift in Sources */,
+				8454403F2416EAE600A79018 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,24 +711,11 @@
 				8485B3C22417318000BEC6FA /* RegisterControllerTests.swift in Sources */,
 				84AC117A25367666004BCDF2 /* SearchViewModel.swift in Sources */,
 				84AC116C253672D3004BCDF2 /* SearchCell.swift in Sources */,
-				84AC11AF25367DA5004BCDF2 /* SearchNavController.swift in Sources */,
 				8462DF4C2417A1CD009258A9 /* ForgotPasswordTests.swift in Sources */,
 				845440422416F5E000A79018 /* AuthenticationErrorTests.swift in Sources */,
-				84AC11D925368735004BCDF2 /* UIFont+Extension.swift in Sources */,
+				84AC11D925368735004BCDF2 /* UIFont.swift in Sources */,
 				845440512417049D00A79018 /* FirebaseServiceStub.swift in Sources */,
 				8485B3C0241727C200BEC6FA /* LoginControllerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84543FF524169C6A00A79018 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84AC117B25367666004BCDF2 /* SearchViewModel.swift in Sources */,
-				84543FFE24169C6A00A79018 /* AuthenticationUITests.swift in Sources */,
-				84AC116D253672D3004BCDF2 /* SearchCell.swift in Sources */,
-				84AC11DA25368735004BCDF2 /* UIFont+Extension.swift in Sources */,
-				84AC11B025367DA5004BCDF2 /* SearchNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,11 +726,6 @@
 			isa = PBXTargetDependency;
 			target = 84543FD724169C6800A79018 /* LibTrack */;
 			targetProxy = 84543FEF24169C6A00A79018 /* PBXContainerItemProxy */;
-		};
-		84543FFB24169C6A00A79018 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84543FD724169C6800A79018 /* LibTrack */;
-			targetProxy = 84543FFA24169C6A00A79018 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1021,46 +961,6 @@
 			};
 			name = Release;
 		};
-		8454400924169C6A00A79018 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97XB8J435J;
-				INFOPLIST_FILE = LibTrackUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = libTrack.LibTrackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LibTrack;
-			};
-			name = Debug;
-		};
-		8454400A24169C6A00A79018 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97XB8J435J;
-				INFOPLIST_FILE = LibTrackUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = libTrack.LibTrackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LibTrack;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1087,15 +987,6 @@
 			buildConfigurations = (
 				8454400624169C6A00A79018 /* Debug */,
 				8454400724169C6A00A79018 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8454400824169C6A00A79018 /* Build configuration list for PBXNativeTarget "LibTrackUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8454400924169C6A00A79018 /* Debug */,
-				8454400A24169C6A00A79018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

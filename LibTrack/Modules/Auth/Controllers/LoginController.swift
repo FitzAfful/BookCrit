@@ -13,77 +13,36 @@ import FirebaseAuth
 import CryptoKit
 import AuthenticationServices
 
-class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate {
+class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate {
 
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var googleView: UIView!
-    @IBOutlet weak var appleImageView: UIImageView!
+    var loginView: LoginView?
+    var loginMdoel: LoginViewModel = LoginViewModel()
 
     fileprivate var currentNonce: String?
-    
-    var loginMdoel: LoginViewModel = LoginViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        createViews()
     }
 
-    func setupUI() {
-        bgView.layer.cornerRadius = 15
-        bgView.layer.shadowColor = UIColor(hex: "#7E7E7E").cgColor
-        bgView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        bgView.layer.shadowOpacity = 0.7
-        bgView.layer.shadowRadius = 4.0
-
-
-        let googleViewTap = UITapGestureRecognizer(target: self, action: #selector(self.signInGoogle))
-        googleView.addGestureRecognizer(googleViewTap)
-        googleView.isUserInteractionEnabled = true
-
-        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.handleViewTap))
-        self.view.isUserInteractionEnabled = true
-        self.view.addGestureRecognizer(tapGesture2)
-
-        appleImageView.tappable = true
-        appleImageView.callback = {
-            self.signInApple()
+    func createViews() {
+        self.navigationController?.navigationBar.isHidden = true
+        loginView = LoginView(delegate: self)
+        if let login = loginView {
+            self.view.addSubview(login)
+            login.snp.makeConstraints({ (make) in
+                make.edges.equalToSuperview()
+            })
         }
     }
 
-    @objc func handleViewTap(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        startLoader()
-        if error != nil {
-            cancelLoader()
-            self.showCustomError("Could not sign in. Please try again later.")
-            return
-        }
-        self.loginMdoel.firebaseGoogleLogin(with: user, completion: { (errorMessage) in
-            if errorMessage == nil {
-                //something was successful
-            }
-        })
-    }
-
-
-    @objc func signInGoogle() {
+    func googleButtonTapped() {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
     }
 
-
-    func signInApple() {
-        if #available(iOS 13, *) {
-            startSignInWithAppleFlow()
-        }
-    }
-
-    @available(iOS 13, *)
-    func startSignInWithAppleFlow() {
+    func appleButtonTapped() {
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -97,6 +56,21 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate 
         authorizationController.performRequests()
     }
 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        startLoader()
+        if error != nil {
+            cancelLoader()
+            self.showAlert(title: "Error", message: "Could not sign in. Please try again later.")
+            return
+        }
+
+        self.loginMdoel.firebaseGoogleLogin(with: user, completion: { (errorMessage) in
+            if errorMessage == nil {
+                // something was successful
+            }
+        })
+    }
+
     @available(iOS 13, *)
     private func sha256(_ input: String) -> String {
         let inputData = Data(input.utf8)
@@ -108,43 +82,10 @@ class LoginController: UIViewController, GIDSignInDelegate, UITextFieldDelegate 
         return hashString
     }
 
-    func cancelLoader() {
-        FTIndicator.dismissProgress()
-    }
-
-    func startLoader() {
-        FTIndicator.showProgress(withMessage: "Signing In")
-    }
-
-    func showCustomError(_ message: String?) {
-        cancelLoader()
-        self.showAlert(withTitle: "Error", message: message ?? "Could not sign in. Please try again later.")
-    }
-
-    func showLoginSuccess(_ message: String?) {
-
-    }
-
-    func showForgotPasswordSuccess(_ message: String?) {
-
-    }
-
-    func displayNetworkError() {
-
-    }
-
-    func initializeFromStoryboard() -> LoginController {
-        let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginController.storyboardID)
-        guard let myController = controller as? LoginController else { fatalError() }
-        return myController
-    }
-
     func presentHomeScreen() {
         FTIndicator.dismissProgress()
-        self.showAlert(withTitle: "Success", message: "Successful Login")
-        /*let controller = TabRouter.assembleModule()
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: false)*/
+        self.showAlert(title: "Success", message: "Successful Login")
+        // Move to Tabs / Search
     }
 
     private func randomNonceString(length: Int = 32) -> String {
@@ -205,7 +146,7 @@ extension LoginController: ASAuthorizationControllerDelegate {
             }
             loginMdoel.firebaseAppleLogin(with: idTokenString, nonce: nonce) { (errorMessage) in
                 if errorMessage == nil {
-                    //success
+                    // success
                 }
             }
         }
@@ -214,5 +155,4 @@ extension LoginController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("Sign in with Apple errored: \(error)")
     }
-
 }

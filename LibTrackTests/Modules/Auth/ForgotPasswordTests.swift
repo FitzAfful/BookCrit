@@ -30,9 +30,4 @@ class ForgotPasswordTests: XCTestCase {
         XCTAssertEqual(forgotPasswordController.emailTF!.errorText, "Enter a valid email address")
     }
 
-    func test_isValidEmail(){
-        let emailAddress = "kofi"
-        XCTAssertFalse(emailAddress.isValidEmail())
-    }
-
 }

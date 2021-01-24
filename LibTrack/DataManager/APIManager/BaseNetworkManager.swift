@@ -72,16 +72,3 @@ protocol APIConfiguration: URLRequestConvertible {
     var headers: HTTPHeaders { get }
     var parameters: [String: Any] { get }
 }
-
-enum NetworkError: LocalizedError {
-    case responseStatusError(message: String)
-}
-
-extension NetworkError {
-    var errorDescription: String {
-        switch self {
-        case let .responseStatusError(message):
-            return "\(message)"
-        }
-    }
-}
