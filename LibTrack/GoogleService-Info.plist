@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>786408218821-56c973mkbrg892jdmr7g6g4pg78gjpdf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.786408218821-56c973mkbrg892jdmr7g6g4pg78gjpdf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCkOPHCiPpM4aLb0-kuOLSMzLWKfrMtgVU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>786408218821</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>libTrack.LibTrack</string>
+	<key>PROJECT_ID</key>
+	<string>bookcrit-424f7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bookcrit-424f7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:786408218821:ios:58cd1b104d0fa15c0a50ac</string>
+	<key>DATABASE_URL</key>
+	<string>https://bookcrit-424f7.firebaseio.com</string>
+</dict>
+</plist>

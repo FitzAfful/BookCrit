@@ -1,0 +1,40 @@
+//
+//  ColorExtensions.swift
+//  RideAlong
+//
+//   on 11/01/2019.
+//  Copyright © 2019 RideAlong. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+extension UIColor {
+
+    static let primary = UIColor(named: "primary")
+    static let dark = UIColor(named: "dark")
+    static let light = UIColor(named: "light")
+
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1)
+    }
+
+    convenience init(hex: String, alpha: CGFloat = 1.0) {
+        var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+
+        if hexFormatted.hasPrefix("#") {
+            hexFormatted = String(hexFormatted.dropFirst())
+        }
+
+        assert(hexFormatted.count == 6, "Invalid hex code used.")
+
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+
+        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                  alpha: alpha)
+    }
+
+}

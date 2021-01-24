@@ -1,12 +1,11 @@
 included:
-  - BookCrit
+  - LibTrack
 
 excluded:
   - Pods
-  - BookCrit/Utilities
 
 line_length:
-    warning: 150
+    warning: 300
     error: 400
     ignores_function_declarations: true
     ignores_comments: true
@@ -14,4 +13,5 @@ line_length:
 
 disabled_rules:
   - force_cast
+  - identifier_name
 
