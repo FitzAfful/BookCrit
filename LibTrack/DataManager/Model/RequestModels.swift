@@ -16,4 +16,6 @@ public struct Book: Codable {
     var categories: [String]
     var publishedDate: String?
     var imageUrl: String?
+    var isbn: String?
+    var isbn13: String?
 }
