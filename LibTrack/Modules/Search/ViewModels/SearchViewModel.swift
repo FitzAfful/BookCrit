@@ -12,6 +12,7 @@ class SearchViewModel {
 
     var dataFetcher: GoogleBooksDataFetcher?
     var books: [Book] = []
+    var bookHelper: BookHelper = BookHelper()
 
     init(fetcher: GoogleBooksDataFetcher) {
         self.dataFetcher = fetcher
@@ -21,7 +22,7 @@ class SearchViewModel {
         dataFetcher?.searchBookOnGoogleBooks(book: word, completion: { (result) in
             switch result.result {
             case.success(let response):
-                self.books = response.items.map({ return $0.getBook() })
+                self.books = response.items.map({ return self.bookHelper.convertGoogleItemToBookItem(googleItem: $0) })
                 completion(self.books, nil, word)
             case .failure:
                 completion(nil, BaseNetworkManager().getErrorMessage(response: result), word)
