@@ -12,7 +12,7 @@ import Firebase
 
 class LoginViewModel {
 
-    var firebaseService = FirebaseService()
+    var firebaseHelper = FirebaseHelper()
     var cryptHelper = CryptHelper()
     var nonce: String?
     var view: LoginController
@@ -22,15 +22,15 @@ class LoginViewModel {
     }
 
     func firebaseGoogleLogin(with googleUser: GIDGoogleUser) {
-        let credential = firebaseService.getCredentialFromGoogle(with: googleUser)
-        firebaseService.loginUser(credential: credential) { (result, error) in
+        let credential = firebaseHelper.getCredentialFromGoogle(with: googleUser)
+        firebaseHelper.loginUser(credential: credential) { (result, error) in
             self.signedIn(error: error, result: result)
         }
     }
 
     func firebaseAppleLogin(with idToken: String) {
-        let credential = firebaseService.getCredentialFromApple(with: idToken, nonce: nonce!)
-        firebaseService.loginUser(credential: credential) { (result, error) in
+        let credential = firebaseHelper.getCredentialFromApple(with: idToken, nonce: nonce!)
+        firebaseHelper.loginUser(credential: credential) { (result, error) in
             self.signedIn(error: error, result: result)
         }
     }

@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import GoogleSignIn
+import FirebaseAuth
+
+class MockFirebaseHelper: FirebaseHelperProtocol {
+    func getCredentialFromGoogle(with googleUser: GIDGoogleUser) -> AuthCredential {
+        
+    }
+    
+    func getCredentialFromApple(with idToken: String, nonce: String) -> AuthCredential {
+        
+    }
+    
+    func loginUser(credential: AuthCredential, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        
+    }
+    
+    
+    
+}

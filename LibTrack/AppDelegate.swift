@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         return true
     }
-
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [: ]) -> Bool {
         let checkGoogle =  GIDSignIn.sharedInstance().handle(url)
         return checkGoogle

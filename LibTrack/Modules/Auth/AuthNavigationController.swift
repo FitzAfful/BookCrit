@@ -13,11 +13,20 @@ class AuthNavigationController: UINavigationController {
 
     enum Screen {
         case login
+        case onboarding
+        case selectGenres
+        case createUsername
 
-        var viewController: BaseViewController {
+        var viewController: UIViewController {
             switch self {
             case .login:
                 return LoginController()
+            case .onboarding:
+                return PageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
+            case .selectGenres:
+                return GenreSelectionController()
+            case .createUsername:
+                return CreateUsernameController()
             }
         }
     }

@@ -20,12 +20,14 @@ class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         loginModel = LoginViewModel(view: self)
+
         createViews()
     }
 
     func createViews() {
         self.navigationController?.navigationBar.isHidden = true
         loginView = LoginView(delegate: self)
+        view.backgroundColor = UIColor(hex: "#000000")
         if let login = loginView {
             self.view.addSubview(login)
             login.snp.makeConstraints({ (make) in
@@ -53,13 +55,16 @@ class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate 
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        startLoader()
+//        startLoader()
         if error != nil {
             self.showAlert(title: "Error", message: "Could not sign in. Please try again later.")
             return
         }
-
+//        cancelLoader()
         self.loginModel?.firebaseGoogleLogin(with: user)
+        if let navigationControl = navigationController as? AuthNavigationController {
+            navigationControl.navigate(.createUsername)
+        }
     }
 }
 
