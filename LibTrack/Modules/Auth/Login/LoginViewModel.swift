@@ -9,6 +9,7 @@
 import Foundation
 import GoogleSignIn
 import Firebase
+import Alamofire
 
 class LoginViewModel {
 
@@ -57,12 +58,52 @@ class LoginViewModel {
             self.view.showAlert(title: "Error", message: message)
             return
         }
-        // sign in successful move to next screen
+        // get verified token
+        getVerifyIDToken()
     }
 
     func get256Sha() -> String {
         self.nonce = cryptHelper.randomNonceString()
         return cryptHelper.sha256(self.nonce!)
+    }
+
+    func signIn() {
+        AuthNetworkManager.signUp { (result) in
+            self.parseSignInResponse(result: result)
+        }
+    }
+
+    private func parseSignInResponse(result: DataResponse<SignupResponse, AFError>) {
+        switch result.result {
+        case .success(let response):
+            print(response)
+            if response.data.username == "" || response.data.username == "null" || response.data.username == nil {
+                view.moveToChooseUsernameController()
+            }else {
+                
+            }
+            break
+        case .failure( _):
+            break
+
+        }
+    }
+
+    func getVerifyIDToken() {
+        let currentUser = Auth.auth().currentUser
+        currentUser?.getIDTokenForcingRefresh(true) { idToken, error in
+            if let error = error {
+                // Handle error
+                print("error: \(error.localizedDescription)")
+                return
+            }
+            print("id token: \(String(describing: idToken))")
+            let def: UserDefaults = UserDefaults.standard
+            def.set(idToken, forKey: "idToken")
+            // Send token to your backend via HTTPS
+            // ...
+            self.signIn()
+        }
     }
 
 }

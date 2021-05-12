@@ -62,8 +62,19 @@ class LoginController: BaseViewController, GIDSignInDelegate, LoginViewDelegate 
         }
 //        cancelLoader()
         self.loginModel?.firebaseGoogleLogin(with: user)
+    }
+
+    func moveToChooseUsernameController() {
         if let navigationControl = navigationController as? AuthNavigationController {
+            print("moved")
             navigationControl.navigate(.createUsername)
+        }
+    }
+
+    func moveToHomeController() {
+        if let navigationControl = navigationController as? AuthNavigationController {
+            print("moved")
+            navigationControl.navigate(.home)
         }
     }
 }

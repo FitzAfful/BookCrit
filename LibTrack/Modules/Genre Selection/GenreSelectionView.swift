@@ -46,7 +46,7 @@ class GenreSelectionView: UIView, HTagViewDelegate {
         createSubtitleLabel()
         createLineView()
         createTagsView()
-        createNextButton()
+        createDoneButton()
     }
 
     func createSmallLogoView() {
@@ -141,12 +141,13 @@ class GenreSelectionView: UIView, HTagViewDelegate {
         tagView.reloadData()
     }
 
-    func createNextButton() {
+    func createDoneButton() {
         nextButton.clipsToBounds = true
         nextButton.layer.cornerRadius = 25
         nextButton.backgroundColor = .white
         nextButton.setTitle("Done", for: .normal)
         nextButton.setTitleColor(.black, for: .normal)
+        nextButton.titleLabel?.font = UIFont(name: "MarkPro-Bold", size: 20)
         self.addSubview(nextButton)
         self.bringSubviewToFront(nextButton)
         nextButton.snp.makeConstraints({ (make) in

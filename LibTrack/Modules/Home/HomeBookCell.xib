@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkPro-Bold.otf">
+            <string>MarkPro-Bold</string>
+        </array>
+        <array key="MarkPro-Book.otf">
+            <string>MarkPro-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="HomeBookCell" customModule="LibTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKt-rt-XOP">
+                        <rect key="frame" x="20" y="23" width="67.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="VwQ-qi-JBg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="18"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Promise Land, Barack Obama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-dR-TB0">
+                        <rect key="frame" x="16" y="220" width="217" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="dRe-uU-nc3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkPro-Book" family="Mark Pro" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8c-iu-ias">
+                        <rect key="frame" x="16" y="246" width="382" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="xqE-lx-rjY"/>
+                        </constraints>
+                        <string key="text">A riveting, deeply personal account of history in the making—from the president who inspired us to believe in the power of democracy.</string>
+                        <fontDescription key="fontDescription" name="MarkPro-Book" family="Mark Pro" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0H-js-mPe">
+                        <rect key="frame" x="349" y="23" width="53" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="qsv-Sg-npx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkPro-Book" family="Mark Pro" pointSize="13"/>
+                        <state key="normal" title="See all &gt;">
+                            <color key="titleColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reT-6j-AAb">
+                        <rect key="frame" x="16" y="290" width="89" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="OAB-Wg-VfU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkPro-Book" family="Mark Pro" pointSize="13"/>
+                        <state key="normal" title="More Details&gt;">
+                            <color key="titleColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hej-8E-lZO">
+                        <rect key="frame" x="16" y="52" width="382" height="155"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="155" id="gQ0-0t-V9H"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z26-m1-7ru">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-Vj-k6f">
+                        <rect key="frame" x="377" y="220" width="21" height="21"/>
+                        <color key="backgroundColor" red="0.24313725489999999" green="0.30316948890000001" blue="0.69415479899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="cYF-Zl-U0x"/>
+                            <constraint firstAttribute="height" constant="21" id="dm4-sI-p6u"/>
+                        </constraints>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Hej-8E-lZO" firstAttribute="top" secondItem="n0H-js-mPe" secondAttribute="bottom" constant="3" id="0ad-cG-Pq4"/>
+                    <constraint firstAttribute="trailing" secondItem="n0H-js-mPe" secondAttribute="trailing" constant="12" id="4IN-bn-vcX"/>
+                    <constraint firstItem="R8c-iu-ias" firstAttribute="leading" secondItem="PNX-dR-TB0" secondAttribute="leading" id="4g6-5y-qbI"/>
+                    <constraint firstItem="Hej-8E-lZO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5yZ-N2-RO7"/>
+                    <constraint firstItem="n0H-js-mPe" firstAttribute="leading" secondItem="hKt-rt-XOP" secondAttribute="trailing" constant="261.5" id="6j0-TE-Tf1"/>
+                    <constraint firstItem="PNX-dR-TB0" firstAttribute="top" secondItem="Hej-8E-lZO" secondAttribute="bottom" constant="13" id="9gl-qZ-HrG"/>
+                    <constraint firstItem="VBq-Vj-k6f" firstAttribute="top" secondItem="Hej-8E-lZO" secondAttribute="bottom" constant="13" id="AWB-wk-xfg"/>
+                    <constraint firstItem="R8c-iu-ias" firstAttribute="top" secondItem="PNX-dR-TB0" secondAttribute="bottom" constant="5" id="Bjh-rE-2Yj"/>
+                    <constraint firstItem="VBq-Vj-k6f" firstAttribute="trailing" secondItem="Hej-8E-lZO" secondAttribute="trailing" id="LNv-zQ-Vq8"/>
+                    <constraint firstItem="hKt-rt-XOP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="MsS-rN-KLG"/>
+                    <constraint firstItem="reT-6j-AAb" firstAttribute="leading" secondItem="R8c-iu-ias" secondAttribute="leading" id="VEl-h1-dPt"/>
+                    <constraint firstItem="R8c-iu-ias" firstAttribute="trailing" secondItem="VBq-Vj-k6f" secondAttribute="trailing" id="XgL-uC-ur9"/>
+                    <constraint firstItem="PNX-dR-TB0" firstAttribute="top" secondItem="VBq-Vj-k6f" secondAttribute="top" id="c56-Tu-Su7"/>
+                    <constraint firstItem="reT-6j-AAb" firstAttribute="top" secondItem="R8c-iu-ias" secondAttribute="bottom" constant="3" id="f74-f8-Ni9"/>
+                    <constraint firstItem="n0H-js-mPe" firstAttribute="top" secondItem="hKt-rt-XOP" secondAttribute="top" id="fmK-YH-rjr"/>
+                    <constraint firstItem="PNX-dR-TB0" firstAttribute="leading" secondItem="Hej-8E-lZO" secondAttribute="leading" id="mCy-l3-124"/>
+                    <constraint firstItem="hKt-rt-XOP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="ntG-c7-nwC"/>
+                    <constraint firstAttribute="trailing" secondItem="Hej-8E-lZO" secondAttribute="trailing" constant="16" id="vck-XL-uBi"/>
+                    <constraint firstItem="R8c-iu-ias" firstAttribute="top" secondItem="VBq-Vj-k6f" secondAttribute="bottom" constant="5" id="zTa-b7-GRf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookAuthorLabel" destination="PNX-dR-TB0" id="QEk-hD-qed"/>
+                <outlet property="homeBookCollectionView" destination="Hej-8E-lZO" id="jIe-gM-dul"/>
+                <outlet property="moreDetailsButton" destination="reT-6j-AAb" id="kjX-tH-4rh"/>
+                <outlet property="optionsButton" destination="VBq-Vj-k6f" id="r5h-Vz-1Bx"/>
+                <outlet property="rowTitleLabel" destination="hKt-rt-XOP" id="5CZ-hP-1Lz"/>
+                <outlet property="seeAllButton" destination="n0H-js-mPe" id="UHN-jP-EmK"/>
+                <outlet property="synopsisLabel" destination="R8c-iu-ias" id="Yew-jz-hbn"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="140.95982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

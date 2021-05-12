@@ -16,6 +16,7 @@ class AuthNavigationController: UINavigationController {
         case onboarding
         case selectGenres
         case createUsername
+        case home
 
         var viewController: UIViewController {
             switch self {
@@ -27,6 +28,8 @@ class AuthNavigationController: UINavigationController {
                 return GenreSelectionController()
             case .createUsername:
                 return CreateUsernameController()
+            case .home:
+                return HomeController()
             }
         }
     }

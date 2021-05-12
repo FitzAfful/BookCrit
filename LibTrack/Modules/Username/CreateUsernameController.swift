@@ -7,26 +7,33 @@
 //
 
 import UIKit
+import Alamofire
 
 class CreateUsernameController: BaseViewController, CreateUsernameViewDelegate, UITextFieldDelegate {
 
+    var createUsernameView: CreateUsernameView?
+    var usernameModel: CreateUsernameViewModel?
+
     func createUsernameTapped() {
-        print("create")
         if createUsernameView?.usernameTextField.text == "GeraldCOYG" {
-            createUsernameView?.usernameTextField.showErrorWithText(errorText: "This username, \(String(describing: createUsernameView?.usernameTextField.text!)) already exists.")
+            createUsernameView?.createErrorLabel(username: (createUsernameView?.usernameTextField.text!)!)
         } else {
-            if let navigationControl = navigationController as? AuthNavigationController {
-                navigationControl.navigate(.selectGenres)
-            }
+            let parameter: ChooseUsernameParameter = ChooseUsernameParameter(newUsername: (createUsernameView?.usernameTextField.text!)!)
+            usernameModel?.chooseUsername(chooseUsernameParameter: parameter)
+            
         }
     }
 
-    var createUsernameView: CreateUsernameView?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        usernameModel = CreateUsernameViewModel(view: self)
         createViews()
+    }
+
+    func moveToSelectGenreController() {
+        if let navigationControl = navigationController as? AuthNavigationController {
+            navigationControl.navigate(.selectGenres)
+        }
     }
 
     func createViews() {

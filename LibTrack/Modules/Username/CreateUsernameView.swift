@@ -21,6 +21,7 @@ class CreateUsernameView: UIView {
     let subtitleLabel = UILabel()
     let lineView = UIView()
     let usernameTextField = ACFloatingTextfield()
+    let textFieldErrorLabel = UILabel()
     let usernameButton = UIButton()
 
     weak var delegate: CreateUsernameViewDelegate?
@@ -119,6 +120,19 @@ class CreateUsernameView: UIView {
         }
     }
 
+    func createErrorLabel(username: String) {
+        textFieldErrorLabel.text = "This username, \(username) already exists."
+        textFieldErrorLabel.textColor = .red
+        textFieldErrorLabel.font = UIFont(name: "MarkPro", size: 12)
+        self.addSubview(textFieldErrorLabel)
+        textFieldErrorLabel.snp.makeConstraints({ (make) in
+            make.centerX.equalToSuperview()
+            make.topMargin.equalTo(295)
+            make.width.equalTo(260)
+            make.height.equalTo(44)
+        })
+    }
+
     func createUsernameButton() {
         usernameButton.contentMode = .scaleAspectFill
         usernameButton.clipsToBounds = true
@@ -126,12 +140,13 @@ class CreateUsernameView: UIView {
         usernameButton.backgroundColor = .white
         usernameButton.setTitle("Set Username", for: .normal)
         usernameButton.setTitleColor(.black, for: .normal)
+        usernameButton.titleLabel?.font = UIFont(name: "MarkPro-Bold", size: 20)
         usernameButton.addTarget(self, action: #selector(createUsernameButtonTapped), for: .touchUpInside)
         self.addSubview(usernameButton)
         self.bringSubviewToFront(usernameButton)
         usernameButton.snp.makeConstraints({ (make) in
             make.centerX.equalToSuperview()
-            make.bottomMargin.equalTo(self.snp.bottom).inset(280)
+            make.bottomMargin.equalTo(self.snp.bottom).inset(270)
             make.width.equalTo(250)
             make.height.equalTo(50)
         })
