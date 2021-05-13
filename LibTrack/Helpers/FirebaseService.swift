@@ -12,13 +12,13 @@ import FirebaseAuth
 
 typealias FirebaseAuthResult = AuthDataResult
 
-protocol FirebaseServiceProtocol: class {
+protocol FirebaseHelperProtocol: class {
+    func getCredentialFromGoogle(with googleUser: GIDGoogleUser) -> AuthCredential
+    func getCredentialFromApple(with idToken: String, nonce: String) -> AuthCredential
     func loginUser(credential: AuthCredential, completion: @escaping (AuthDataResult?, Error?) -> Void)
-    func registerUser(with email: String, password: String, name: String, completion: @escaping (AuthDataResult?, Error?) -> Void)
-    func forgotPassword(with email: String, completion: @escaping (Error?) -> Void)
 }
 
-class FirebaseService: FirebaseServiceProtocol {
+class FirebaseHelper: FirebaseHelperProtocol {
     func getCredentialFromGoogle(with googleUser: GIDGoogleUser) -> AuthCredential {
         let authentication = googleUser.authentication
         let credential = GoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
@@ -30,40 +30,12 @@ class FirebaseService: FirebaseServiceProtocol {
         return credential
     }
 
-    func getCredentialFromEmail(with email: String, password: String) -> AuthCredential {
-        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
-        return credential
-    }
-
     func loginUser(credential: AuthCredential, completion: @escaping (AuthDataResult?, Error?) -> Void) {
         Auth.auth().signIn(with: credential) { (result, error) in
             completion(result, error)
         }
     }
 
-    func registerUser(with email: String, password: String, name: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            completion(result, error)
-        }
-    }
-
-    func forgotPassword(with email: String, completion: @escaping (Error?) -> Void) {
-        Auth.auth().sendPasswordReset(withEmail: email) { error in
-            completion(error)
-        }
-    }
-
-    func updateCurrentUserDetails(email: String, name: String, photoURL: String) {
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = name
-            changeRequest.photoURL =
-                URL(string: photoURL)
-            changeRequest.commitChanges { _ in
-            }
-        }
-    }
 }
 
 enum AuthenticationError: Error {

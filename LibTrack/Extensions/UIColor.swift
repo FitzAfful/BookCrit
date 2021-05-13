@@ -14,6 +14,7 @@ extension UIColor {
     static let primary = UIColor(named: "primary")
     static let dark = UIColor(named: "dark")
     static let light = UIColor(named: "light")
+    static let googleBlue = UIColor(hex: "#4285F4")
 
     convenience init(hex: String) {
         self.init(hex: hex, alpha: 1)

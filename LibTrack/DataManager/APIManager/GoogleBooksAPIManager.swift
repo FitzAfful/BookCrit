@@ -22,7 +22,7 @@ public class GoogleBooksAPIManager: GoogleBooksDataFetcher {
     }
 
     func searchBookOnGoogleBooks(book: String, completion: @escaping (DataResponse<GoogleBooksResponse, AFError>) -> Void) {
-        manager.request(GoogleBooksRouter.searchBookOnGoogleBooks(book: book)).responseDecodable { (response: DataResponse<GoogleBooksResponse, AFError>) in
+        manager.request(GoogleBooksRouter.searchBookOnGoogleBooks(book: book) as URLRequestConvertible).responseDecodable { (response: DataResponse<GoogleBooksResponse, AFError>) in
             completion(response)
         }
     }

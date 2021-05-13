@@ -17,6 +17,7 @@ target 'LibTrack' do
     pod 'DTPhotoViewerController'
     pod 'SwiftLint'
     pod 'SnapKit'
+    pod "HTagView"
 
     post_install do |pi|
         pi.pods_project.targets.each do |t|

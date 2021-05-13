@@ -9,10 +9,11 @@
 import Foundation
 import GoogleSignIn
 import Firebase
+import Alamofire
 
 class LoginViewModel {
 
-    var firebaseService = FirebaseService()
+    var firebaseHelper = FirebaseHelper()
     var cryptHelper = CryptHelper()
     var nonce: String?
     var view: LoginController
@@ -22,15 +23,15 @@ class LoginViewModel {
     }
 
     func firebaseGoogleLogin(with googleUser: GIDGoogleUser) {
-        let credential = firebaseService.getCredentialFromGoogle(with: googleUser)
-        firebaseService.loginUser(credential: credential) { (result, error) in
+        let credential = firebaseHelper.getCredentialFromGoogle(with: googleUser)
+        firebaseHelper.loginUser(credential: credential) { (result, error) in
             self.signedIn(error: error, result: result)
         }
     }
 
     func firebaseAppleLogin(with idToken: String) {
-        let credential = firebaseService.getCredentialFromApple(with: idToken, nonce: nonce!)
-        firebaseService.loginUser(credential: credential) { (result, error) in
+        let credential = firebaseHelper.getCredentialFromApple(with: idToken, nonce: nonce!)
+        firebaseHelper.loginUser(credential: credential) { (result, error) in
             self.signedIn(error: error, result: result)
         }
     }
@@ -57,12 +58,52 @@ class LoginViewModel {
             self.view.showAlert(title: "Error", message: message)
             return
         }
-        // sign in successful move to next screen
+        // get verified token
+        getVerifyIDToken()
     }
 
     func get256Sha() -> String {
         self.nonce = cryptHelper.randomNonceString()
         return cryptHelper.sha256(self.nonce!)
+    }
+
+    func signIn() {
+        AuthNetworkManager.signUp { (result) in
+            self.parseSignInResponse(result: result)
+        }
+    }
+
+    private func parseSignInResponse(result: DataResponse<SignupResponse, AFError>) {
+        switch result.result {
+        case .success(let response):
+            print(response)
+            if response.data.username == "" || response.data.username == "null" || response.data.username == nil {
+                view.moveToChooseUsernameController()
+            }else {
+                
+            }
+            break
+        case .failure( _):
+            break
+
+        }
+    }
+
+    func getVerifyIDToken() {
+        let currentUser = Auth.auth().currentUser
+        currentUser?.getIDTokenForcingRefresh(true) { idToken, error in
+            if let error = error {
+                // Handle error
+                print("error: \(error.localizedDescription)")
+                return
+            }
+            print("id token: \(String(describing: idToken))")
+            let def: UserDefaults = UserDefaults.standard
+            def.set(idToken, forKey: "idToken")
+            // Send token to your backend via HTTPS
+            // ...
+            self.signIn()
+        }
     }
 
 }
