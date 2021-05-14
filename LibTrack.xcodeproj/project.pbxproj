@@ -105,6 +105,7 @@
 		D58BC36E25C31E8900EFF1B2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BC36D25C31E8900EFF1B2 /* NetworkConstants.swift */; };
 		D58BC39025C31F3C00EFF1B2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BC36D25C31E8900EFF1B2 /* NetworkConstants.swift */; };
 		D58BC39425C321D100EFF1B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D58BC39325C321D100EFF1B2 /* GoogleService-Info.plist */; };
+		D5A69FE5264DB7E50022C807 /* GenreSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A69FE4264DB7E50022C807 /* GenreSelectionViewModel.swift */; };
 		D5BB792F26385A6900C50314 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB792E26385A6900C50314 /* ApiResponse.swift */; };
 		D5C04F8F2603B8690059CAEA /* BookCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C04F8D2603B8690059CAEA /* BookCVCell.swift */; };
 		D5C04F902603B8690059CAEA /* BookCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C04F8E2603B8690059CAEA /* BookCVCell.xib */; };
@@ -201,6 +202,7 @@
 		D57F10BA25EC4D18009C22D0 /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		D58BC36D25C31E8900EFF1B2 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		D58BC39325C321D100EFF1B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5A69FE4264DB7E50022C807 /* GenreSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectionViewModel.swift; sourceTree = "<group>"; };
 		D5BB792E26385A6900C50314 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		D5C04F8D2603B8690059CAEA /* BookCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCVCell.swift; sourceTree = "<group>"; };
 		D5C04F8E2603B8690059CAEA /* BookCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCVCell.xib; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 			children = (
 				D502855325ED523F00A35D2B /* GenreSelectionController.swift */,
 				D502855725ED525200A35D2B /* GenreSelectionView.swift */,
+				D5A69FE4264DB7E50022C807 /* GenreSelectionViewModel.swift */,
 			);
 			path = "Genre Selection";
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				8454402D2416DC6C00A79018 /* LoginController.swift in Sources */,
 				8454403C2416EAE600A79018 /* UIViewController.swift in Sources */,
 				84AC114525367172004BCDF2 /* SearchController.swift in Sources */,
+				D5A69FE5264DB7E50022C807 /* GenreSelectionViewModel.swift in Sources */,
 				D57F10BB25EC4D18009C22D0 /* BasePageViewController.swift in Sources */,
 				D533D53226307B2800FE49BC /* AuthNetworkManager.swift in Sources */,
 				84AC10FA2535F532004BCDF2 /* GoogleBooksRouter.swift in Sources */,

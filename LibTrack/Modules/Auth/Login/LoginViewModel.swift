@@ -80,7 +80,7 @@ class LoginViewModel {
             if response.data.username == "" || response.data.username == "null" || response.data.username == nil {
                 view.moveToChooseUsernameController()
             }else {
-                
+            
             }
             break
         case .failure( _):
