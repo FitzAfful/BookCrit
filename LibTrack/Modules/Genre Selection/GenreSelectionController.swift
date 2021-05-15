@@ -16,10 +16,13 @@ class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDa
     var selectedTagData: [Int] = []
 
     var genreSelectionView: GenreSelectionView?
+    var genreViewModel: GenreSelectionViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         createViews()
+        genreViewModel!.getGenres()
+        
     }
 
     func createViews() {
@@ -71,6 +74,10 @@ class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDa
 
     func tagView(_ tagView: HTagView, didCancelTagAtIndex index: Int) {
         genreSelectionView!.tagView.reloadData()
+    }
+    
+    func moveToHomeController() {
+        
     }
 
 }

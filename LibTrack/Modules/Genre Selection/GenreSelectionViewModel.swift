@@ -27,7 +27,7 @@ class GenreSelectionViewModel {
         switch result.result {
         case .success(let response):
             print(response)
-
+            view.moveToHomeController()
             break
         case .failure( _):
             break
