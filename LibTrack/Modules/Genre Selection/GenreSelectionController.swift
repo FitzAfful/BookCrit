@@ -13,6 +13,7 @@ import SnapKit
 class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDataSource {
 
     var tagData = ["Fiction", "Action", "Adventure", "Classics", "Graphic Novel", "Mystery", "Detective", "Fantasy", "Historical Fiction", "Horror", "Literary Fiction", "Romance", "Science Fiction", "Short Stories", "Suspense", "Thriller", "Women's Fiction", "Biography"]
+    var genreData: [GenresResponse] = []
     var selectedTagData: [Int] = []
 
     var genreSelectionView: GenreSelectionView?
