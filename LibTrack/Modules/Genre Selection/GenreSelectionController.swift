@@ -13,13 +13,17 @@ import SnapKit
 class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDataSource {
 
     var tagData = ["Fiction", "Action", "Adventure", "Classics", "Graphic Novel", "Mystery", "Detective", "Fantasy", "Historical Fiction", "Horror", "Literary Fiction", "Romance", "Science Fiction", "Short Stories", "Suspense", "Thriller", "Women's Fiction", "Biography"]
+    var genreData: [GenresResponse] = []
     var selectedTagData: [Int] = []
 
     var genreSelectionView: GenreSelectionView?
+    var genreViewModel: GenreSelectionViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         createViews()
+        genreViewModel!.getGenres()
+        
     }
 
     func createViews() {
@@ -71,6 +75,10 @@ class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDa
 
     func tagView(_ tagView: HTagView, didCancelTagAtIndex index: Int) {
         genreSelectionView!.tagView.reloadData()
+    }
+    
+    func moveToHomeController() {
+        
     }
 
 }

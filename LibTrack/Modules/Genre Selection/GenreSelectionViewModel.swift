@@ -27,7 +27,8 @@ class GenreSelectionViewModel {
         switch result.result {
         case .success(let response):
             print(response)
-
+            
+            view.genreData.append(response)
             break
         case .failure( _):
             break
