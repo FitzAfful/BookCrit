@@ -18,6 +18,11 @@ class GenreSelectionController: BaseViewController, HTagViewDelegate, HTagViewDa
 
     var genreSelectionView: GenreSelectionView?
     var genreViewModel: GenreSelectionViewModel?
+    
+    func doneButtonTapped() {
+        let parameter: GetUserGenresParameter = GetUserGenresParameter(uid: "id")
+        genreViewModel?.sendUserGenres(getUserGenresParameter: parameter)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

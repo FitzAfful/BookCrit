@@ -20,7 +20,7 @@ class CreateUsernameController: BaseViewController, CreateUsernameViewDelegate, 
         } else {
             let parameter: ChooseUsernameParameter = ChooseUsernameParameter(newUsername: (createUsernameView?.usernameTextField.text!)!)
             usernameModel?.chooseUsername(chooseUsernameParameter: parameter)
-            
+
         }
     }
 
