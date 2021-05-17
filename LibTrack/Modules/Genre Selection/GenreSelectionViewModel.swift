@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class GenreSelectionViewModel {
-    
+
     var view: GenreSelectionController
 
     init(view: GenreSelectionController) {
@@ -29,6 +29,24 @@ class GenreSelectionViewModel {
             print(response)
             
             view.genreData.append(response)
+            break
+        case .failure( _):
+            break
+
+        }
+    }
+    
+    func sendUserGenres(getUserGenresParameter: GetUserGenresParameter) {
+        AuthNetworkManager.getUserGenres(parameter: getUserGenresParameter) { (result) in
+            self.parseUserGenresResponse(result: result)
+        }
+    }
+
+    private func parseUserGenresResponse(result: DataResponse<GenresResponse, AFError>) {
+        switch result.result {
+        case .success(let response):
+            print(response)
+            
             break
         case .failure( _):
             break
