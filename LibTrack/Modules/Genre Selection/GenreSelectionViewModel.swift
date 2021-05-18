@@ -46,7 +46,7 @@ class GenreSelectionViewModel {
         switch result.result {
         case .success(let response):
             print(response)
-            
+            //do something when you get a user's response
             break
         case .failure( _):
             break
