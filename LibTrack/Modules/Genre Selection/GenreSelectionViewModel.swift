@@ -35,7 +35,7 @@ class GenreSelectionViewModel {
 
         }
     }
-    
+
     func sendUserGenres(getUserGenresParameter: GetUserGenresParameter) {
         AuthNetworkManager.getUserGenres(parameter: getUserGenresParameter) { (result) in
             self.parseUserGenresResponse(result: result)
@@ -53,4 +53,25 @@ class GenreSelectionViewModel {
 
         }
     }
+
+    //delete this next time
+    func sendUsername(getUserGenresParameter: ChooseUsernameParameter) {
+        AuthNetworkManager.chooseUsername(parameter: getUserGenresParameter) { (result) in
+            self.parseUserNameResponse(result: result)
+        }
+    }
+
+    private func parseUserNameResponse(result: DataResponse<SignupResponse, AFError>) {
+        switch result.result {
+        case .success(let response):
+            print(response)
+            //do something when you get a user's response
+            break
+        case .failure( _):
+            break
+
+        }
+    }
+    
+    
 }
